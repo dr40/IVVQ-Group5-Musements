@@ -15,6 +15,7 @@ class PostSpec extends Specification {
     def cleanup() {
     }
 
+
     void "post content cannot be empty"() {
 
         def postWithContent = new Post(content: "post content")
