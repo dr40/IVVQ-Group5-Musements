@@ -2,7 +2,9 @@ package musement
 
 class User {
 
-    // Commit in issue branch
+    String email
+    String password
+
     static constraints = {
     }
 }
