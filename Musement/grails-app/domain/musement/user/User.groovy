@@ -16,7 +16,7 @@ class User {
 	static constraints = {
         username    blank: false, nullable: false, size: 1..64, unique: true
         email       blank: false, nullable: false, email: true, size: 1..128, unique: true
-        password    blank: false, nullable: false, size: 8..64
+        password    blank: false, nullable: false, size: 8..64, password: true // Must have Digits, Letters
 	}
 
     static hasMany = [
