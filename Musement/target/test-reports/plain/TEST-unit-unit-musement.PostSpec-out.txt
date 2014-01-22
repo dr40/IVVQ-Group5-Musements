@@ -1,3 +1,0 @@
---Output from post content cannot be empty--
---Output from post content have user and category linked--
---Output from post date are initialized to current date--

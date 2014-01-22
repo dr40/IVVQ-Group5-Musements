@@ -1,5 +1,7 @@
 package musement
 
+import musement.user.User
+
 class Post {
 
     User sender;
