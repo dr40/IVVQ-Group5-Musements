@@ -10,12 +10,8 @@ import spock.lang.Specification
 @TestFor(Post)
 class PostSpec extends Specification {
 
-    def user1
-    def category1
-
     def setup() {
-        user1 = new User()
-        category1 = new Category(name: "test", description: "myDesc")
+
     }
 
     def cleanup() {
@@ -24,8 +20,8 @@ class PostSpec extends Specification {
 
     void "post content cannot be empty"() {
 
-        def postWithContent = new Post(sender: user1, postCategory: category1, content: "post content")
-        def postWithoutContent = new Post(sender: user1, postCategory: category1)
+        def postWithContent = new Post(sender: Mock(User), postCategory: category1, content: "post content")
+        def postWithoutContent = new Post(sender: Mock(User), postCategory: category1)
 
         expect:
         postWithContent.validate()
