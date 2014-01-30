@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf652909-45cd-44c4-a54a-62867894938c" name="Default" comment="#25 - Create_Domain_Post&#10;">
+    <list default="true" id="bf652909-45cd-44c4-a54a-62867894938c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Musement.iws" />
@@ -508,7 +508,7 @@
       <workItem from="1390471871951" duration="1741000" />
       <workItem from="1390506100411" duration="3421000" />
       <workItem from="1391026469976" duration="609000" />
-      <workItem from="1391073312478" duration="3604000" />
+      <workItem from="1391073312478" duration="3763000" />
     </task>
     <task id="LOCAL-00001" summary="#25 - Create_Domain_Post&#10;">
       <created>1390471583634</created>
@@ -518,11 +518,29 @@
       <created>1391076754495</created>
       <updated>1391076754495</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
-    <servers />
+    <task id="LOCAL-00003" summary="#25 - Create_Domain_Post&#10;">
+      <created>1391077031478</created>
+      <updated>1391077031478</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers>
+      <GitHub shared="false" url="github.com">
+        <commitMessageFormat>{id} {summary}</commitMessageFormat>
+        <password />
+        <token>df98df9ddf9adf9edf99df92df9adf9adf99df9adfc8df93dfcbdf9ddf98dfcbdfccdf93df93dfc9dfc9df99df98df9ddfcedfc8dfcfdfccdf9bdf9fdf99dfcbdf9edfccdf9ddf9ddf92dfcedf9ddf98</token>
+        <option name="loginAnonymously" value="false" />
+        <option name="repoAuthor" value="dr40" />
+        <option name="repoName" value="IVVQ-Group5-Musements" />
+        <option name="shouldFormatCommitMessage" value="false" />
+        <option name="useHttpAuthentication" value="false" />
+        <option name="useProxy" value="false" />
+        <option name="user" value="alexandrahalchin" />
+        <username />
+      </GitHub>
+    </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13768000" />
+    <option name="totallyTimeSpent" value="13927000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
