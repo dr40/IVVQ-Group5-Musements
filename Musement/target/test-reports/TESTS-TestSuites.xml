@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="LenovoRD" id="0" name="PostSpec" package="musement" tests="3" time="2.872" timestamp="2014-01-16T22:06:08">
+  <testsuite errors="0" failures="0" hostname="Admin-PC" id="0" name="CategorySpec" package="musement" tests="1" time="0.639" timestamp="2014-01-30T09:47:04">
       <properties />
 
-      <testcase classname="musement.PostSpec" name="post content cannot be empty" time="2.541" />
+      <testcase classname="musement.CategorySpec" name="verify category name can not be empty" time="0.618" />
 
-      <testcase classname="musement.PostSpec" name="post content have user and category linked" time="0.143" />
-
-      <testcase classname="musement.PostSpec" name="post date are initialized to current date" time="0.121" />
-
-      <system-out><![CDATA[--Output from post content cannot be empty--
---Output from post content have user and category linked--
---Output from post date are initialized to current date--
+      <system-out><![CDATA[--Output from verify category name can not be empty--
 ]]></system-out>
 
-      <system-err><![CDATA[--Output from post content cannot be empty--
---Output from post content have user and category linked--
---Output from post date are initialized to current date--
+      <system-err><![CDATA[--Output from verify category name can not be empty--
 ]]></system-err>
 
   </testsuite>

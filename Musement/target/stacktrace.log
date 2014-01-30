@@ -5824,3 +5824,57 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	... 4 more
 Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: musement.user.UserRole column: user_id (should be mapped with insert="false" update="false")
 	... 4 more
+2014-01-30 10:45:58,381 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+categoryWrongName.validate()
+|                 |
+|                 false
+musement.Category : (unsaved)
+
+	at musement.CategorySpec.verify category name can not be empty(CategorySpec.groovy:30)
+2014-01-30 10:45:58,391 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+categoryWrongName.validate()
+|                 |
+|                 false
+musement.Category : (unsaved)
+
+	at musement.CategorySpec.verify category name can not be empty(CategorySpec.groovy:30)
+2014-01-30 10:45:58,392 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+categoryWrongName.validate()
+|                 |
+|                 false
+musement.Category : (unsaved)
+
+	at musement.CategorySpec.verify category name can not be empty(CategorySpec.groovy:30)
+2014-01-30 10:45:58,393 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+categoryWrongName.validate()
+|                 |
+|                 false
+musement.Category : (unsaved)
+
+	at musement.CategorySpec.verify category name can not be empty(CategorySpec.groovy:30)
+2014-01-30 10:45:58,399 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+categoryWrongName.validate()
+|                 |
+|                 false
+musement.Category : (unsaved)
+
+	at musement.CategorySpec.verify category name can not be empty(CategorySpec.groovy:30)
+2014-01-30 10:45:58,399 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+categoryWrongName.validate()
+|                 |
+|                 false
+musement.Category : (unsaved)
+
+	at musement.CategorySpec.verify category name can not be empty(CategorySpec.groovy:30)
