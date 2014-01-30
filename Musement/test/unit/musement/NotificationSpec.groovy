@@ -1,6 +1,7 @@
 package musement
 
 import grails.test.mixin.TestFor
+import musement.user.User
 import spock.lang.Specification
 
 /**
@@ -9,39 +10,35 @@ import spock.lang.Specification
 @TestFor(Notification)
 class NotificationSpec extends Specification {
 
-    def post_received
-    def category1
 
     def setup() {
-        post_received = new Post()
-        category1 = new Category()
+
     }
 
     def cleanup() {
     }
 
-    void "notification category cannot be empty"() {
-
-        def notificationWithCategory = new Notification( concernedPost: post_received, category: category1)
-        def notificationWithoutCategory = new Notification( concernedPost: post_received )
+    void "notification must have an user"() {
+        def myPost = Mock(Post)
+        def notificationWithUser = new Notification(user: Mock(User),posts:[myPost] )
+        def notificationWithoutUser = new Notification(posts:[myPost])
 
         expect:
-        notificationWithCategory.validate()
-        notificationWithCategory.category == category1
-        !notificationWithoutCategory.validate()
+        notificationWithUser.validate()
+        !notificationWithoutUser.validate()
 
     }
 
     void "notification post cannot be empty " () {
-        def notificationWithPost = new Notification(concernedPost: post_received, category: category1 )
-        def notificationWithoutPost = new Notification()
+        def myPost = Mock(Post)
+        def notificationWithPost = new Notification(user:Mock(User), posts: [myPost])
+        def notificationWithoutPost = new Notification(user:Mock(User))
 
         expect:
         notificationWithPost.validate()
-        notificationWithPost.concernedPost == post_received
-        notificationWithPost.category == category1
         !notificationWithoutPost.validate()
 
-
     }
+
+
 }

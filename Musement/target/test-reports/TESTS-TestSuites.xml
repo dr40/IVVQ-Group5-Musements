@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="LenovoRD" id="0" name="PostSpec" package="musement" tests="3" time="2.872" timestamp="2014-01-16T22:06:08">
+  <testsuite errors="0" failures="0" hostname="Aleca-PC" id="0" name="NotificationSpec" package="musement" tests="2" time="3.154" timestamp="2014-01-30T10:10:47">
       <properties />
 
-      <testcase classname="musement.PostSpec" name="post content cannot be empty" time="2.541" />
+      <testcase classname="musement.NotificationSpec" name="notification must have an user" time="2.655" />
 
-      <testcase classname="musement.PostSpec" name="post content have user and category linked" time="0.143" />
+      <testcase classname="musement.NotificationSpec" name="notification post cannot be empty " time="0.063" />
 
-      <testcase classname="musement.PostSpec" name="post date are initialized to current date" time="0.121" />
+      <system-out><![CDATA[--Output from notification must have an user--
+--Output from notification post cannot be empty --
+]]></system-out>
+
+      <system-err><![CDATA[--Output from notification must have an user--
+--Output from notification post cannot be empty --
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Aleca-PC" id="1" name="PostSpec" package="musement" tests="3" time="0.309" timestamp="2014-01-30T10:10:50">
+      <properties />
+
+      <testcase classname="musement.PostSpec" name="post content cannot be empty" time="0.221" />
+
+      <testcase classname="musement.PostSpec" name="post content have user and category linked" time="0.05" />
+
+      <testcase classname="musement.PostSpec" name="post date are initialized to current date" time="0.03" />
 
       <system-out><![CDATA[--Output from post content cannot be empty--
 --Output from post content have user and category linked--

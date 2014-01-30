@@ -5824,3 +5824,237 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	... 4 more
 Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: musement.user.UserRole column: user_id (should be mapped with insert="false" update="false")
 	... 4 more
+2014-01-30 10:40:13,135 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$976b9635) values: [Mock for type 'Post']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:26)
+2014-01-30 10:40:13,416 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$976b9635) values: [Mock for type 'Post']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:26)
+2014-01-30 10:40:13,487 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$976b9635) values: [Mock for type 'Post']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:26)
+2014-01-30 10:40:13,506 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$976b9635) values: [Mock for type 'Post']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:26)
+2014-01-30 10:40:13,595 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$976b9635) values: [Mock for type 'Post']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:26)
+2014-01-30 10:40:13,610 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$976b9635) values: [Mock for type 'Post']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:26)
+2014-01-30 10:40:14,045 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.lang.Class) values: [class musement.Post]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:36)
+2014-01-30 10:40:14,058 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.lang.Class) values: [class musement.Post]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:36)
+2014-01-30 10:40:14,109 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.lang.Class) values: [class musement.Post]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:36)
+2014-01-30 10:40:14,122 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.lang.Class) values: [class musement.Post]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:36)
+2014-01-30 10:40:14,165 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.lang.Class) values: [class musement.Post]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:36)
+2014-01-30 10:40:14,173 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.lang.Class) values: [class musement.Post]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:36)
+2014-01-30 10:52:10,353 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:52:10,377 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:52:10,400 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:52:10,406 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:52:10,439 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:52:10,444 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:52:10,598 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:52:10,604 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:52:10,624 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:52:10,629 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:52:10,648 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:52:10,654 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:58:16,758 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$e1cffc1c) values: [Mock for type 'Post' named 'myPost']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:58:16,784 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$e1cffc1c) values: [Mock for type 'Post' named 'myPost']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:58:16,810 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$e1cffc1c) values: [Mock for type 'Post' named 'myPost']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:58:16,816 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$e1cffc1c) values: [Mock for type 'Post' named 'myPost']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:58:16,848 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$e1cffc1c) values: [Mock for type 'Post' named 'myPost']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:58:16,853 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$e1cffc1c) values: [Mock for type 'Post' named 'myPost']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:58:17,000 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:58:17,005 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:58:17,025 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:58:17,031 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:58:17,049 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:58:17,054 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:59:35,266 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$abfa67a2) values: [Mock for type 'Post' named 'myPost']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:59:35,291 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$abfa67a2) values: [Mock for type 'Post' named 'myPost']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:59:35,321 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$abfa67a2) values: [Mock for type 'Post' named 'myPost']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:59:35,326 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$abfa67a2) values: [Mock for type 'Post' named 'myPost']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:59:35,357 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$abfa67a2) values: [Mock for type 'Post' named 'myPost']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:59:35,361 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (musement.Post$$EnhancerByCGLIB$$abfa67a2) values: [Mock for type 'Post' named 'myPost']
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification must have an user(NotificationSpec.groovy:23)
+2014-01-30 10:59:35,517 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:59:35,522 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:59:35,542 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:59:35,547 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:59:35,566 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 10:59:35,571 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 11:06:27,458 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 11:06:27,503 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 11:06:27,592 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 11:06:27,606 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 11:06:27,677 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 11:06:27,689 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingMethodException: No signature of method: musement.Notification.addToPosts() is applicable for argument types: (java.util.LinkedHashMap) values: [[post:Mock for type 'Post']]
+Possible solutions: getPosts()
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 11:08:27,434 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: myPost for class: musement.NotificationSpec
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 11:08:27,443 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: myPost for class: musement.NotificationSpec
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 11:08:27,450 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: myPost for class: musement.NotificationSpec
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 11:08:27,451 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: myPost for class: musement.NotificationSpec
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 11:08:27,461 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: myPost for class: musement.NotificationSpec
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
+2014-01-30 11:08:27,462 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: myPost for class: musement.NotificationSpec
+	at musement.NotificationSpec.notification post cannot be empty (NotificationSpec.groovy:33)
