@@ -2,6 +2,7 @@ package musement.user
 
 import grails.test.mixin.TestFor
 import spock.lang.Specification
+import spock.lang.Unroll
 
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
@@ -9,12 +10,21 @@ import spock.lang.Specification
 @TestFor(Role)
 class RoleSpec extends Specification {
 
-    def setup() {
-    }
+    @Unroll
+    void "test constraints - authority: #authority"(String authority, boolean expectedResult) {
+        given: "a user"
+        Role role = new Role(
+                authority: authority
+        )
 
-    def cleanup() {
-    }
+        expect: "validate method to return the expected result"
+        role.validate() == expectedResult
 
-    void "test something"() {
+        where:
+        authority           | expectedResult
+        Roles.ADMIN         | true
+        Roles.USER          | true
+        ""                  | false
+        "someRole"          | false
     }
 }
