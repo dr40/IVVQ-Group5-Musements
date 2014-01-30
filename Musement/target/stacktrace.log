@@ -5824,3 +5824,4443 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	... 4 more
 Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: musement.user.UserRole column: user_id (should be mapped with insert="false" update="false")
 	... 4 more
+2014-01-30 09:30:30,221 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,246 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,247 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,248 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,269 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,270 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,319 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,319 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,320 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,320 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,321 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,321 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,577 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,577 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,578 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,578 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,578 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,578 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:30:30,753 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:30:30,754 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:30:30,754 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:30:30,754 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:30:30,755 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:30:30,755 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:30:30,880 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:30:30,880 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:30:30,881 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:30:30,881 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:30:30,882 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:30:30,882 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:32:12,332 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,337 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,339 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,339 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,344 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,344 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,406 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,407 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,407 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,408 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,408 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,408 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,536 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,536 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,536 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,537 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,537 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,537 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:12,797 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:32:12,797 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:32:12,798 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:32:12,798 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:32:12,799 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:32:12,799 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:32:12,918 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:32:12,918 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:32:12,919 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:32:12,919 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:32:12,919 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:32:12,919 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:32:50,278 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,282 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,284 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,285 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,290 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,291 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,340 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,341 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,341 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,342 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,342 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,342 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,465 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,465 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,466 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,466 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,466 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,466 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:32:50,717 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:32:50,717 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:32:50,717 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:32:50,718 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:32:50,718 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:32:50,718 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:32:50,831 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:32:50,831 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:32:50,833 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:32:50,833 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:32:50,833 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:32:50,833 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:36:30,012 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,018 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,020 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,020 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,026 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,027 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,076 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,076 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,077 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,077 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,077 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,077 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,106 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,108 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,111 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,111 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,111 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,111 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:36:30,446 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:36:30,447 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:36:30,447 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:36:30,448 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:36:30,450 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:36:30,450 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:36:30,614 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:36:30,615 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:36:30,615 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:36:30,615 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:36:30,616 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:36:30,616 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:38:48,630 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,637 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,638 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,638 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,643 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,644 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,700 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,701 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,701 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,701 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,702 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,702 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,732 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,732 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,732 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,733 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,733 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:48,733 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:38:49,059 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:38:49,059 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:38:49,060 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:38:49,060 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:38:49,060 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:38:49,060 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:38:49,192 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:38:49,193 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:38:49,193 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:38:49,194 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:38:49,194 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:38:49,194 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:39:39,312 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,318 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,321 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,322 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,330 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,330 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,391 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,391 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,392 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,392 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,392 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,392 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,420 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,421 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,422 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,422 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,422 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,422 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:39:39,807 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:39:39,808 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:39:39,808 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:39:39,808 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:39:39,809 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:39:39,809 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:39:39,941 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:39:39,942 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:39:39,942 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:39:39,943 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:39:39,943 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:39:39,943 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:40:50,975 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:50,981 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:50,982 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:50,983 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:50,989 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:50,989 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,046 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,047 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,048 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,048 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,048 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,048 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,088 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,088 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,088 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,089 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,089 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,089 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:40:51,415 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:40:51,415 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:40:51,415 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:40:51,416 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:40:51,416 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:40:51,416 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:40:51,561 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:40:51,561 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:40:51,562 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:40:51,562 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:40:51,563 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:40:51,563 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:41:57,417 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,422 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,423 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,424 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,428 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,428 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,478 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,480 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,481 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,481 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,481 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,481 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,511 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,511 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,512 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,512 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,512 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,512 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:24)
+2014-01-30 09:41:57,730 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:41:57,730 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:41:57,730 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:41:57,731 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:41:57,731 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:41:57,731 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:49)
+2014-01-30 09:41:57,856 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:41:57,857 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:41:57,857 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:41:57,858 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:41:57,858 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:41:57,858 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:69)
+2014-01-30 09:43:22,222 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,229 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,231 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,232 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,241 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,241 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,344 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,345 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,346 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,351 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,351 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,351 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,419 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,419 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,420 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,421 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,421 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,421 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:22)
+2014-01-30 09:43:22,657 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:47)
+2014-01-30 09:43:22,657 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:47)
+2014-01-30 09:43:22,658 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:47)
+2014-01-30 09:43:22,658 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:47)
+2014-01-30 09:43:22,658 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:47)
+2014-01-30 09:43:22,658 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:47)
+2014-01-30 09:43:22,867 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:67)
+2014-01-30 09:43:22,867 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:67)
+2014-01-30 09:43:22,868 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:67)
+2014-01-30 09:43:22,868 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:67)
+2014-01-30 09:43:22,868 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:67)
+2014-01-30 09:43:22,868 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:67)
+2014-01-30 09:46:26,035 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,040 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,042 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,042 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,048 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,048 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,101 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,101 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,102 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,102 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,102 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,102 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,144 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,145 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,145 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,145 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,146 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,146 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:27)
+2014-01-30 09:46:26,481 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:53)
+2014-01-30 09:46:26,481 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:53)
+2014-01-30 09:46:26,482 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:53)
+2014-01-30 09:46:26,482 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:53)
+2014-01-30 09:46:26,482 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:53)
+2014-01-30 09:46:26,482 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:53)
+2014-01-30 09:46:26,617 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:74)
+2014-01-30 09:46:26,618 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:74)
+2014-01-30 09:46:26,618 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:74)
+2014-01-30 09:46:26,618 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:74)
+2014-01-30 09:46:26,619 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:74)
+2014-01-30 09:46:26,619 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:74)
+2014-01-30 09:47:53,785 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:53,790 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:53,791 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:53,792 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:53,798 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:53,798 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:53,881 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:53,882 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:53,882 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:53,882 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:53,882 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:53,883 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:54,009 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:54,009 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:54,010 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:54,021 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:54,022 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:54,022 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:54,050 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:54,051 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:54,051 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:54,051 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:54,051 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:47:54,052 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:23)
+2014-01-30 09:49:32,477 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,483 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,487 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,488 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,494 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,494 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,565 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,565 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,566 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,566 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,566 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,566 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,691 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,691 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,691 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,692 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,692 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,692 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,723 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,724 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,724 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,725 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,725 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:49:32,725 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,745 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,751 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,753 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,754 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,760 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,760 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,813 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,814 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,814 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,815 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,815 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,815 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,846 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,847 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,847 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,847 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,848 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:23,848 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:51:24,167 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:51)
+2014-01-30 09:51:24,167 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:51)
+2014-01-30 09:51:24,168 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:51)
+2014-01-30 09:51:24,168 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:51)
+2014-01-30 09:51:24,168 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:51)
+2014-01-30 09:51:24,168 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - email: #email(UserSpec.groovy:51)
+2014-01-30 09:51:24,291 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:72)
+2014-01-30 09:51:24,292 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:72)
+2014-01-30 09:51:24,293 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:72)
+2014-01-30 09:51:24,293 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:72)
+2014-01-30 09:51:24,293 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:72)
+2014-01-30 09:51:24,293 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - password: #password(UserSpec.groovy:72)
+2014-01-30 09:52:39,897 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:39,902 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:39,904 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:39,904 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:39,911 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:39,911 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:39,974 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:39,975 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:39,975 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:39,975 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:39,976 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:39,976 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:40,006 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:40,006 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:40,007 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:40,007 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:40,007 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:52:40,007 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:53:56,878 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:53:56,884 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:53:56,886 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:53:56,886 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:53:56,892 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:53:56,892 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:53:56,923 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:53:56,923 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:53:56,924 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:53:56,924 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:53:56,924 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:53:56,924 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:54:41,381 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:54:41,386 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:54:41,387 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:54:41,387 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:54:41,393 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:54:41,393 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:56:14,786 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:56:14,791 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:56:14,792 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:56:14,793 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:56:14,798 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:56:14,798 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:58:09,830 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:58:09,836 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:58:09,837 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:58:09,837 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:58:09,843 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:58:09,843 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    false      |  true
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:58:10,187 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:58:10,191 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:58:10,192 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:58:10,193 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:58:10,193 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 09:58:10,194 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 10:13:03,454 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 10:13:03,459 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 10:13:03,461 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 10:13:03,462 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 10:13:03,468 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 10:13:03,468 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 10:13:51,173 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 10:13:51,178 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 10:13:51,180 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 10:13:51,180 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 10:13:51,186 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)
+2014-01-30 10:13:51,186 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+user.validate() == expectedResult
+|    |          |  |
+|    true       |  false
+|               false
+musement.user.User : (unsaved)
+
+	at musement.user.UserSpec.test constraints - username: #username(UserSpec.groovy:25)

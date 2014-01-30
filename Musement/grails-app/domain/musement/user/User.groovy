@@ -1,5 +1,6 @@
 package musement.user
 
+import musement.Notification
 import musement.Post
 import musement.Category
 
@@ -11,21 +12,19 @@ class User {
     String email
 	String password
 
+    Notification notification
+
 	static transients = ['springSecurityService']
 
-	static constraints = {
-        username    blank: false, nullable: false, size: 1..64, unique: true
-        email       blank: false, nullable: false, email: true, size: 1..128, unique: true
-        password    blank: false, nullable: false, size: 8..64, password: true // Must have Digits, Letters
+	static constraints = { //
+        username    blank: false, unique: true, size: 4..16, matches: '^[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)*$'
+        email       blank: false, email: true, size: 5..64, unique: true
+        password    blank: false
 	}
 
     static hasMany = [
             categories : Category,
             posts : Post
-    ]
-
-    static belongsTo = [
-            Category
     ]
 
 	static mapping = {
