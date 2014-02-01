@@ -6,6 +6,7 @@ class Role {
 
 	static mapping = {
 		cache true
+        version(false)
 	}
 
 	static constraints = {
@@ -14,6 +15,16 @@ class Role {
 }
 
 enum Roles {
-    ADMIN,
-    USER
+    ROLE_ADMIN(1),
+    ROLE_USER(2)
+
+    Long id
+
+    Roles(Long id) {
+        this.id = id
+    }
+
+    Role getRole() {
+        Role.get(id)
+    }
 }

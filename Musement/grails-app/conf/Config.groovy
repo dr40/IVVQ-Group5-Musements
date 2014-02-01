@@ -86,6 +86,7 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        grails.serverURL = "http://localhost:8080/Musement"
     }
     production {
         grails.logging.jul.usebridge = false
@@ -100,7 +101,8 @@ log4j = {
     //appenders {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
-
+    debug 'org.springframework.security'
+    // info 'grails.plugin.springsecurity.web.filter.DebugFilter'
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers
            'org.codehaus.groovy.grails.web.pages',          // GSP
            'org.codehaus.groovy.grails.web.sitemesh',       // layouts
@@ -118,6 +120,13 @@ log4j = {
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'musement.user.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'musement.user.UserRole'
 grails.plugin.springsecurity.authority.className = 'musement.user.Role'
+
+// security config
+grails.plugin.springsecurity.password.algorithm = 'bcrypt'
+//grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/secure/anonymous'
+//grails.plugin.springsecurity.password.hash.iterations = 1
+//grails.plugin.springsecurity.logout.postOnly = false
+
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
 	'/index':                         ['permitAll'],
@@ -127,3 +136,11 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/images/**':                  ['permitAll'],
 	'/**/favicon.ico':                ['permitAll']
 ]
+
+// Added so two equal strings encoded with encodePassword() method of
+// SpringSecurity plugin are still equal after begin encoded in test environment
+environments {
+    test {
+        grails.plugin.springsecurity.password.algorithm = 'SHA-1'
+    }
+}
