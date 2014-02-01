@@ -2,7 +2,7 @@ package musement
 
 import grails.test.mixin.TestFor
 import spock.lang.Specification
-
+import musement.user.User
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
  */
@@ -15,6 +15,25 @@ class NotificationSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
+    void "notification must have an user"() {
+        def myPost = Mock(Post)
+        def notificationWithUser = new Notification(user: Mock(User),posts:[myPost] )
+        def notificationWithoutUser = new Notification(posts:[myPost])
+
+        expect:
+        notificationWithUser.validate()
+        !notificationWithoutUser.validate()
+
+    }
+
+    void "notification post cannot be empty " () {
+        def myPost = Mock(Post)
+        def notificationWithPost = new Notification(user:Mock(User), posts: [myPost])
+        def notificationWithoutPost = new Notification(user:Mock(User))
+
+        expect:
+        notificationWithPost.validate()
+        !notificationWithoutPost.validate()
+
     }
 }

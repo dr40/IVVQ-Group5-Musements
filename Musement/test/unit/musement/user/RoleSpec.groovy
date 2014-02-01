@@ -22,8 +22,8 @@ class RoleSpec extends Specification {
 
         where:
         authority           | expectedResult
-        Roles.ADMIN         | true
-        Roles.USER          | true
+        Roles.ROLE_ADMIN    | true
+        Roles.ROLE_USER     | true
         ""                  | false
         "someRole"          | false
     }
