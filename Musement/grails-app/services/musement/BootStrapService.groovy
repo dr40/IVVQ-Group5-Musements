@@ -17,6 +17,11 @@ class BootStrapService {
     User admin
     User normal
 
+    Category musement
+
+    Notification adminNotification
+    Notification normalNotification
+
     def initializeRoles() {
         Sql sql = new Sql(dataSource)
 
@@ -33,16 +38,31 @@ class BootStrapService {
         }
     }
 
-    def inializeDefaultUsers() {
-        admin = User.findByUsername("admin")
+    def initializeDefaultCategory() {
+        /* Default category */
+        musement = Category.findByName("Musement")
+        if (!musement) {
+            musement = new Category(name: 'Musement', description: 'Default Musement Category. Here you can see everything.')
+            musement.save()
+        }
+    }
+
+    def initializeDefaultUsers() {
+        /* Default admin user */
+        admin = User.findByUsername('admin')
         if (!admin) {
-            admin = new User(username: 'admin', email: 'admin@musement.com', password: '12345678')
+            admin = new User(username: 'admin', email: 'admin@musement.com', password: '12345678',
+                        notification: new Notification())
+            admin.addToCategories(musement)
             admin = userAccountService.addUser(admin, adminRole, true)
         }
 
+        /* Default normal user */
         normal = User.findByUsername('default');
         if (!normal) {
-            normal = new User(username: 'default', email: 'default@musement.com', password: '87654321')
+            normal = new User(username: 'default', email: 'default@musement.com', password: '87654321',
+                        notification: new Notification())
+            normal.addToCategories(musement)
             normal = userAccountService.addUser(normal, normalRole, true)
         }
     }
