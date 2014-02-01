@@ -1,7 +1,7 @@
 package musement.user
 
-import musement.Notification
 import musement.Post
+import musement.Notification
 import musement.Category
 
 class User {
@@ -12,11 +12,16 @@ class User {
     String email
 	String password
 
-    Notification notification
+    boolean enabled = true
+    boolean accountExpired
+    boolean accountLocked
+    boolean passwordExpired
+
+    // Notification notification
 
 	static transients = ['springSecurityService']
 
-	static constraints = { //
+	static constraints = {
         username    blank: false, unique: true, size: 4..16, matches: '^[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)*$'
         email       blank: false, email: true, size: 5..64, unique: true
         password    blank: false
@@ -46,6 +51,6 @@ class User {
 	}
 
 	protected void encodePassword() {
-		password = springSecurityService.encodePassword(password, username)
+		password = springSecurityService.encodePassword(password)
 	}
 }
