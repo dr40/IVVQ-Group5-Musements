@@ -4,7 +4,7 @@ import musement.user.User
 class Notification {
 
     //Post Received_Notification
-    static hasOne = [
+    static belongsTo = [
             user: User
     ]
 
