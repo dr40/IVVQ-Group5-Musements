@@ -17,7 +17,7 @@ class User {
     boolean accountLocked
     boolean passwordExpired
 
-    // Notification notification
+    Notification notification
 
 	static transients = ['springSecurityService']
 
