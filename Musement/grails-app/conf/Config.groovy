@@ -101,8 +101,9 @@ log4j = {
     //appenders {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
-    debug 'org.springframework.security'
-    // info 'grails.plugin.springsecurity.web.filter.DebugFilter'
+
+    // Uncomment this for Sprig Security debug:
+    // debug 'org.springframework.security'
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers
            'org.codehaus.groovy.grails.web.pages',          // GSP
            'org.codehaus.groovy.grails.web.sitemesh',       // layouts
@@ -121,7 +122,7 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'musement.user.Use
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'musement.user.UserRole'
 grails.plugin.springsecurity.authority.className = 'musement.user.Role'
 
-// security config
+// Security Config
 grails.plugin.springsecurity.password.algorithm = 'bcrypt'
 //grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/secure/anonymous'
 //grails.plugin.springsecurity.password.hash.iterations = 1
