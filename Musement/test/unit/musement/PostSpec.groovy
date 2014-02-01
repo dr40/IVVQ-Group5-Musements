@@ -10,12 +10,7 @@ import spock.lang.Specification
 @TestFor(Post)
 class PostSpec extends Specification {
 
-    def user1
-    def category1
-
     def setup() {
-        user1 = new User()
-        category1 = new Category(name: "test", description: "myDesc")
     }
 
     def cleanup() {
@@ -24,8 +19,8 @@ class PostSpec extends Specification {
 
     void "post content cannot be empty"() {
 
-        def postWithContent = new Post(sender: user1, postCategory: category1, content: "post content")
-        def postWithoutContent = new Post(sender: user1, postCategory: category1)
+        def postWithContent = new Post(sender: Mock(User), category: Mock(Category), content: "post content")
+        def postWithoutContent = new Post(sender: Mock(User), category: Mock(Category))
 
         expect:
         postWithContent.validate()
@@ -35,15 +30,13 @@ class PostSpec extends Specification {
     }
     void "post content have user and category linked"() {
 
-        def postWithUserAndCategory = new Post(sender: user1, postCategory: category1, content: "post content")
+        def postWithUserAndCategory = new Post(sender: Mock(User), category: Mock(Category), content: "post content")
         def postWithoutUserAndCategory = new Post(content: "post content")
-        def postWithoutUser = new Post(postCategory: category1, content: "post content")
-        def postWithoutCategory = new Post(sender: user1, content: "post content")
+        def postWithoutUser = new Post(category: Mock(Category), content: "post content")
+        def postWithoutCategory = new Post(sender: Mock(User), content: "post content")
 
         expect:
         postWithUserAndCategory.validate()
-        postWithUserAndCategory.sender == user1
-        postWithUserAndCategory.postCategory == category1
         !postWithoutUserAndCategory.validate()
         !postWithoutUser.validate()
         !postWithoutCategory.validate()
