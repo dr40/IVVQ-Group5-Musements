@@ -26,14 +26,24 @@ class NotificationSpec extends Specification {
 
     }
 
-    void "notification post cannot be empty " () {
+    void "notification post can have more than one post " () {
         def myPost = Mock(Post)
+        def N = new Random().nextInt(100)+2
+        def postList = [];
+        for(int i = 0; i < N; i++) {
+            postList.push(Mock(Post))
+        }
+
         def notificationWithPost = new Notification(user:Mock(User), posts: [myPost])
         def notificationWithoutPost = new Notification(user:Mock(User))
+        def notificationWithNPost = new Notification(user:Mock(User), posts:postList)
 
         expect:
+        notificationWithNPost.validate()
+        notificationWithNPost.posts.size() == N
+        notificationWithPost.posts.size() == 1
         notificationWithPost.validate()
-        !notificationWithoutPost.validate()
+        notificationWithoutPost.validate()
 
     }
 }
