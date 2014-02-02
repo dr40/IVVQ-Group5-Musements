@@ -116,6 +116,8 @@
 					</g:each>
                     <li class="controller"><g:link controller="secure" action="authenticated">Secure Auth</g:link> </li>
                     <li class="controller"><g:link controller="secure" action="anonymous">Anonymous</g:link> </li>
+                    <li class="controller"><g:link controller="userManagement" action="register">Register</g:link> </li>
+                    <li class="controller"><g:link controller="userManagement" action="update">Update</g:link> </li>
 				</ul>
 			</div>
 		</div>
