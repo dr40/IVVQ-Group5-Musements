@@ -9,7 +9,7 @@ class Category {
 
 
     static constraints = {
-        name blank: false, matches: "[a-zA-Z][a-zA-Z0-9]*", nullable: false
+        name unique: true, blank: false, matches: "[a-zA-Z][a-zA-Z0-9]*", nullable: false
         description nullable: false
     }
 
