@@ -20,14 +20,9 @@ class CategoryController {
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
 
-        if(!verifyUserPrivilege()){
-            //?????????????
-            redirect uri: '/login/auth'
-        }else{
             params.max = Math.min(max ?: 10, 100)
             params.max = Math.min(max ?: 10, 100)
             respond Category.list(params), model: [categoryInstanceCount: Category.count()]
-        }
 
     }
 
@@ -36,12 +31,12 @@ class CategoryController {
         respond categoryInstance
     }
 
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['ROLE_ADMIN'])
     def create() {
         respond new Category(params)
     }
 
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['ROLE_ADMIN'])
     @Transactional
     def save(Category categoryInstance) {
         if (categoryInstance == null) {
@@ -66,12 +61,12 @@ class CategoryController {
         }
     }
 
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['ROLE_ADMIN'])
     def edit(Category categoryInstance) {
         respond categoryInstance
     }
 
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['ROLE_ADMIN'])
     @Transactional
     def update(Category categoryInstance) {
         if (categoryInstance == null) {
@@ -95,7 +90,7 @@ class CategoryController {
         }
     }
 
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['ROLE_ADMIN'])
     @Transactional
     def delete(Category categoryInstance) {
 

@@ -18,7 +18,7 @@
 	<g:textField name="description" value="${categoryInstance?.description}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: categoryInstance, field: 'posts', 'error')} ">
+%{--<div class="fieldcontain ${hasErrors(bean: categoryInstance, field: 'posts', 'error')} ">
 	<label for="posts">
 		<g:message code="category.posts.label" default="Posts" />
 		
@@ -41,5 +41,5 @@
 		
 	</label>
 	
-</div>
+</div>--}%
 
