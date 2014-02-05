@@ -1,17 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Aleca
-  Date: 2/4/14
-  Time: 10:46 PM
---%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title>Notifications</title>
-</head>
-
-<body>
 <g:if test="${notifications.size() > 0}">
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
         <g:each in="${notifications}" var="notif">
@@ -26,5 +13,3 @@
         </g:each>
     </ul>
 </g:if>
-</body>
-</html>
