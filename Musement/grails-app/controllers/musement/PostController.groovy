@@ -40,7 +40,7 @@ class PostController {
         String content = params.content;
         /* Send post using service */
         Post p = postService.sendPost(u, content, c);
-        redirect ( action:"index", method:"GET")
+        redirect ( controller: "userManagement", action: "home", params:[categoryId: params.categoryId])
     }
 
 
