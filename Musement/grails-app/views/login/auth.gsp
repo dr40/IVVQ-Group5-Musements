@@ -2,9 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="../layouts/musement"/>
-    <sec:ifLoggedIn>
-        <title>Musement | Login</title>
-    </sec:ifLoggedIn>
+    <title>Musement | Login</title>
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -21,6 +19,13 @@
                     </ul>
                 </div>
             </sec:ifNotLoggedIn>
+            <sec:ifLoggedIn>
+                <div class="nav-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><g:link controller="logout" ><g:message code="musement.logout"/></g:link></li>
+                    </ul>
+                </div>
+            </sec:ifLoggedIn>
         </div>
     </div>
 </div>

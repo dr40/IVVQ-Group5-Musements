@@ -2,9 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="../layouts/musement"/>
-    <sec:ifLoggedIn>
-        <title>Musement | ${user?.username} Update</title>
-    </sec:ifLoggedIn>
+    <title>Musement | Update</title>
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">

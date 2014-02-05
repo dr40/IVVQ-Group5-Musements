@@ -13,23 +13,22 @@
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar pull-right"></span>
+                <span class="icon-bar"></span>
             </button>
             <a class="brand" href="/Musement">Musement</a>
-            <sec:ifNotLoggedIn>
-                <div class="nav-collapse collapse">
-                    <ul class="nav">
-                        <li><g:link controller="login" ><g:message code="musement.login"/></g:link></li>
-                        <li><g:link controller="userManagement" action="register" ><g:message code="musement.user.register"/></g:link></li>
-                    </ul>
-                </div>
-            </sec:ifNotLoggedIn>
             <sec:ifLoggedIn>
                 <div class="nav-collapse collapse">
-                    <ul class="nav">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <g:link class="dropdown-toggle" data-toggle="dropdown">
+                                <!-- Include the view necessary for showing the number of notification -->
+                                <g:include controller="notification" action="notificationsNumber" />
+                                <g:message code="musement.home.notifications"/>
+                            </g:link>
+                            <g:include controller="notification" action="showNotifications" />
+                        </li>
                         <li><g:link controller="userManagement" action="update" ><g:message code="musement.user.update"/></g:link></li>
                         <li><g:link controller="logout" ><g:message code="musement.logout"/></g:link></li>
-                        <li><g:link controller="category" ><g:message code="musement.home.notifications"/></g:link></li>
                     </ul>
                 </div>
             </sec:ifLoggedIn>
@@ -40,34 +39,16 @@
 <div class="container" style="margin-top: 50px">
 
     <!-- Alerts Info/Error -->
-    <g:if test='${flash.info}'>
-        <div class='alert alert-info alert-dismissable'>
-            ${flash.info}
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        </div>
-    </g:if>
-    <g:if test='${flash.message}'>
-        <div class='alert alert-error alert-dismissable'>
-            ${flash.message}
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        </div>
-    </g:if>
-    <g:if test="${user?.hasErrors()}">
-        <div class='alert alert-warning alert-dismissable'>
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <g:eachError bean="${user}">
-                <li><g:message error="${it}"/></li>
-            </g:eachError>
-        </div>
-    </g:if>
+    <g:render template="../userManagement/alerts" model="[user: user]"/>
 
     <div class="pull-left" style="text-align: center; width: 30%; margin: 20px auto">
-        <h2>${user?.username}</h2>
+        <h1>${user?.username}</h1>
+        <h3>${user?.email}</h3>
 
-        <div id="categories">
-            <ul>
-                <g:each in="${user.categories}" var="cat">
-                    <li><g:link controller="category" action="getPosts">${cat}</g:link></li>
+        <div class="well well-small">
+            <ul class="btn-group-vertical">
+                <g:each in="${user.categories}" var="category">
+                    <li class="btn" ><g:link controller="posts" action="getPosts" params="[currentCategory: category]">${category.name}</g:link></li>
                 </g:each>
             </ul>
         </div>
