@@ -79,7 +79,8 @@ class CategoryController {
             return
         }
 
-        categoryInstance.save flush: true
+        //categoryInstance.save flush: true
+        categoryService.updateCategory(categoryInstance)
 
         request.withFormat {
             form {
@@ -99,7 +100,8 @@ class CategoryController {
             return
         }
 
-        categoryInstance.delete flush: true
+        //categoryInstance.delete flush: true
+        categoryService.deleteCategory(categoryInstance)
 
         request.withFormat {
             form {
