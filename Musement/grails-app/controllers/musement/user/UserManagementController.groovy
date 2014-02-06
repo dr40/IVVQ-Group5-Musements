@@ -4,7 +4,6 @@ import grails.plugin.springsecurity.SpringSecurityService
 import grails.plugin.springsecurity.annotation.Secured
 import musement.Notification
 import musement.Category
-import org.springframework.security.crypto.bcrypt.BCrypt
 
 class UserManagementController {
 
@@ -12,16 +11,31 @@ class UserManagementController {
     UserAccountService userAccountService
 
     /**
+     * Loads the register view. Necessary because the action cannot be done for the view also.
+     * @return
+     */
+    @Secured(['ROLE_ANONYMOUS'])
+    def register() {
+        render(view: '/userManagement/register')
+    }
+
+    /**
      * Method for user registration into the system
      * @return  The user created, if successful
      */
     @Secured(['ROLE_ANONYMOUS'])
-    def register() {
+    def doRegister() {
+        // Normal User Role
         Role normalRole = Roles.ROLE_USER.role
+
+        // Each User has his own Notification object (one-to-one)
         Notification notification = new Notification()
         params.notification = notification
+
+        // The user to register
         User user = new User(params)
-        if (params.password.toString().length() > 0 && (params.password == params.password2)) {
+
+        if (params.password == params.password2) {
             // Get selected categories
             List selectedCategories = new ArrayList()
 
@@ -38,14 +52,14 @@ class UserManagementController {
 
             user = userAccountService.addUser(user, normalRole, true)
         } else {
-            user.errors.rejectValue( 'password', 'musement.user.password.match')
+            user.errors.rejectValue('password', 'musement.user.password.match')
         }
 
         if (user.hasErrors()) {
             render(view: '/userManagement/register', model: [user: user])
         } else {
-            flash.message = message(code: 'musement.user.register.success')
             redirect uri: '/login/auth'
+            flash.info = message(code: 'musement.user.register.success')
         }
 
         println 'Registered user: ' + user.username + ' ' + params.categories
@@ -61,6 +75,7 @@ class UserManagementController {
      */
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def update() {
+        flash.clear()
         User user = (User) springSecurityService.getCurrentUser()
 
         if (!request.post) {
@@ -69,7 +84,7 @@ class UserManagementController {
         }
 
         if (params.password3 != params.password2) {
-            user.errors.rejectValue('password2', 'musement.user.password.match')
+            user.errors.rejectValue('password', 'musement.user.password.match')
         } else {
             // Verify the current password and then update
             if (springSecurityService.passwordEncoder.isPasswordValid(user.password, params.password, null)) {
@@ -83,9 +98,19 @@ class UserManagementController {
             render(view: '/userManagement/update', model: [user: user])
         } else {
             springSecurityService.reauthenticate user.username
-            flash.message = 'musement.user.update.success'
-            render(view: '/index', model: [user: user])
+            render(view: '/userManagement/home', model: [user: user])
+            flash.info = message(code: 'musement.user.update.success')
         }
+    }
+
+    /**
+     * Load the home view for the authenticated user
+     * @return
+     */
+    @Secured(['IS_AUTHENTICATED_FULLY'])
+    def home() {
+        def catId = (params.containsKey('categoryId') ?  params.categoryId : Category.findByName("Musement").id)
+        render(view: 'home', model: [user: springSecurityService.currentUser, categoryId: catId])
     }
 
     /**
