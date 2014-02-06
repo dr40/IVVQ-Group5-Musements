@@ -78,6 +78,9 @@
     </sec:ifNotLoggedIn>
 
     <sec:ifLoggedIn>
+        <div class='alert alert-info' style="text-align: left">
+            ${message(code: "musement.index.loggedin")}
+        </div>
     </sec:ifLoggedIn>
 
 </div> <!-- /container -->
