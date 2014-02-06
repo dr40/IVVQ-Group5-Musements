@@ -13,7 +13,6 @@ class PostController {
 
     SpringSecurityService springSecurityService
     PostService postService
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     /**
      * @param categoryId Id of the current category

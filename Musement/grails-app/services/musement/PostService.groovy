@@ -7,6 +7,8 @@ import musement.user.User;
 @Transactional
 class PostService {
 
+    NotificationService notificationService;
+
     /**
      * Create a Post
      * @param sender
@@ -20,6 +22,7 @@ class PostService {
         if (p.validate()) {
             /* Save */
             p.save flush:true
+            notificationService.Notify(p);
         } else {
             p = null;
         }
