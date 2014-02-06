@@ -3,19 +3,19 @@
 
 
 <div class="fieldcontain ${hasErrors(bean: categoryInstance, field: 'name', 'error')} required">
-	<label for="name">
+	%{--<label for="name">
 		<g:message code="category.name.label" default="Name" />
 		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="name" pattern="${categoryInstance.constraints.name.matches}" required="" value="${categoryInstance?.name}"/>
+	</label>--}%
+	<g:textField name="name" pattern="${categoryInstance.constraints.name.matches}" placeholder="Name" required="" value="${categoryInstance?.name}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: categoryInstance, field: 'description', 'error')} ">
-	<label for="description">
+	%{--<label for="description">
 		<g:message code="category.description.label" default="Description" />
 		
-	</label>
-	<g:textField name="description" value="${categoryInstance?.description}"/>
+	</label>--}%
+	<g:textField name="description"  pattern="${categoryInstance.constraints.description.matches}" required="" placeholder='Description' value="${categoryInstance?.description}"/>
 </div>
 
 %{--<div class="fieldcontain ${hasErrors(bean: categoryInstance, field: 'posts', 'error')} ">

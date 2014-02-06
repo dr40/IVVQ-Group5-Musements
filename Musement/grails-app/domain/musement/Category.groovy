@@ -10,7 +10,7 @@ class Category {
 
     static constraints = {
         name unique: true, blank: false, matches: "[a-zA-Z][a-zA-Z0-9]*", nullable: false
-        description nullable: false
+        description nullable: false, blank: false
     }
 
     static hasMany = [
