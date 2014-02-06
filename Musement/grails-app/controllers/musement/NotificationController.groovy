@@ -21,7 +21,7 @@ class NotificationController {
 
     }
     @Secured(['IS_AUTHENTICATED_FULLY'])
-    def readPost(Post myPost){
+    def readPostByPost(Post myPost){
         User currentUser =  (User)springSecurityService.getCurrentUser()
 
         if (currentUser.notification.posts.contains(myPost)){
@@ -30,7 +30,7 @@ class NotificationController {
         }
     }
     @Secured(['IS_AUTHENTICATED_FULLY'])
-    def readPost(Category myCategory){
+    def readPostByCategory(Category myCategory){
         User currentUser =  (User)springSecurityService.getCurrentUser()
         if(currentUser.notification.posts.category.contains(myCategory)){
             for(post in currentUser.notification.posts){
