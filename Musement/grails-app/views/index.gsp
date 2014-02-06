@@ -114,8 +114,6 @@
 					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
 					</g:each>
-                    <li class="controller"><g:link controller="secure" action="authenticated">Secure Auth</g:link> </li>
-                    <li class="controller"><g:link controller="secure" action="anonymous">Anonymous</g:link> </li>
 				</ul>
 			</div>
 		</div>

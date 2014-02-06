@@ -22,9 +22,9 @@ class User {
 	static transients = ['springSecurityService']
 
 	static constraints = {
-        username    blank: false, unique: true, size: 4..16, matches: '^[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)*$'
-        email       blank: false, email: true, size: 5..64, unique: true
-        password    blank: false
+        username    blank: false, nullable: false, unique: true, size: 4..16, matches: '^[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)*$'
+        email       blank: false, nullable: false, email: true, size: 5..64, unique: true
+        password    blank: false, nullable: false
 	}
 
     static hasMany = [

@@ -124,12 +124,17 @@ grails.plugin.springsecurity.authority.className = 'musement.user.Role'
 
 // Security Config
 grails.plugin.springsecurity.password.algorithm = 'bcrypt'
-//grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/secure/anonymous'
-//grails.plugin.springsecurity.password.hash.iterations = 1
-//grails.plugin.springsecurity.logout.postOnly = false
+
+// Enable default logout controller
+grails.plugin.springsecurity.logout.postOnly = false
+
+// Redirect after successful login
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/userManagement/home'
 
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
+    '/**/home.gsp':                   ['permitAll'],
+    '/**/home':                       ['permitAll'],
 	'/index':                         ['permitAll'],
 	'/index.gsp':                     ['permitAll'],
 	'/**/js/**':                      ['permitAll'],

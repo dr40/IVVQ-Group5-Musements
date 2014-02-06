@@ -45,6 +45,8 @@ class BootStrapService {
             musement = new Category(name: 'Musement', description: 'Default Musement Category. Here you can see everything.')
             musement.save()
         }
+
+        new Category(name: 'Test', description: 'Test').save()
     }
 
     def initializeDefaultUsers() {
