@@ -110,6 +110,11 @@ class UserManagementController {
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def home() {
         def catId = (params.containsKey('categoryId') ?  params.categoryId : Category.findByName("Musement").id)
+
+        // Verify if the user clicked on a Notification
+       if (params.containsKey('readPost')) {
+           notificationService.readCategory(springSecurityService.currentUser, Category.findById(catId))
+       }
         render(view: 'home', model: [user: springSecurityService.currentUser, categoryId: catId])
     }
 
