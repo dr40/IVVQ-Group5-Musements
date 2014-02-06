@@ -50,12 +50,12 @@
                        id='password' placeholder='${message(code: "musement.password")}' >
             </div>
 
-            <div class="form-group" id="remember_me_holder">
+            <div class="form-group" id="remember_me_holder" style="width: 50%; margin: auto">
                 <g:if test='${hasCookie}'>
-                    <label class="checkbox form-control"><g:checkBox name='${rememberMeParameter}' id='remember_me' checked="true" />${message(code: "musement.remember")}</label>
+                    <label class="checkbox" ><input type="checkbox" name='${rememberMeParameter}' id='remember_me' checked="true"/>${message(code: "musement.remember")}</label>
                 </g:if>
                 <g:else>
-                    <label class="checkbox form-control"><g:checkBox name='${rememberMeParameter}' id='remember_me' />${message(code: "musement.remember")}</label>
+                    <label class="checkbox" ><input type="checkbox" name='${rememberMeParameter}' id='remember_me' />${message(code: "musement.remember")}</label>
                 </g:else>
             </div>
 

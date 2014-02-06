@@ -4,10 +4,14 @@ import grails.plugin.springsecurity.SpringSecurityService
 import grails.plugin.springsecurity.annotation.Secured
 import musement.Notification
 import musement.Category
+import musement.NotificationService
 
 class UserManagementController {
 
+    /** Services **/
     SpringSecurityService springSecurityService
+    NotificationService notificationService
+
     UserAccountService userAccountService
 
     /**
@@ -112,9 +116,10 @@ class UserManagementController {
         def catId = (params.containsKey('categoryId') ?  params.categoryId : Category.findByName("Musement").id)
 
         // Verify if the user clicked on a Notification
-       if (params.containsKey('readPost')) {
-           notificationService.readCategory(springSecurityService.currentUser, Category.findById(catId))
-       }
+        if (params.containsKey('readPost')) {
+            notificationService.readCategory(springSecurityService.currentUser, Category.findById(catId))
+        }
+
         render(view: 'home', model: [user: springSecurityService.currentUser, categoryId: catId])
     }
 
