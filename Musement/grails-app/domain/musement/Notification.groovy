@@ -12,7 +12,6 @@ class Notification {
             posts: Post
     ]
 
-
     static constraints = {
         user nullable: false
     }
