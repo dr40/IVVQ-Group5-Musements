@@ -5,6 +5,10 @@
     <sec:ifLoggedIn>
         <title>Musement | ${user?.username} - Home</title>
     </sec:ifLoggedIn>
+    <!-- Init current Category -->
+    <g:if test='${params.containsKey("categoryId") == false}'>
+        ${params.put("categoryId", 1)}
+    </g:if>
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -41,24 +45,32 @@
     <!-- Alerts Info/Error -->
     <g:render template="../userManagement/alerts" model="[user: user]"/>
 
-    <div class="pull-left" style="text-align: center; width: 27%; margin: 20px auto; position: fixed">
+    <div class="pull-left" style="text-align: center; width: 27%; margin: 20px auto; position: fixed;">
         <h1>${user?.username}</h1>
         <h3>${user?.email}</h3>
 
         <div class="well well-large">
             <div class="btn-group-vertical">
-                <g:each in="${user.categories.sort{a,b-> a.id.compareTo(b.id)}}" var="category">
-                    <g:if test="${category.id == params.getInt("categoryId")}">
-                        <g:link class="btn btn-success" controller="userManagement" action="home" params="[categoryId: category.id]">${category.name}</g:link>
-                    </g:if>
-                    <g:else>
-                        <g:link class="btn" controller="userManagement" action="home" params="[categoryId: category.id]">${category.name}</g:link>
-                    </g:else>
-                </g:each>
                 <sec:ifAllGranted roles="ROLE_ADMIN">
+                    <g:each in="${musement.Category.findAll().sort{it.id}}" var="category">
+                        <g:if test="${category.id == params.getInt("categoryId")}">
+                            <g:link class="btn btn-success" controller="userManagement" action="home" params="[categoryId: category.id]">${category.name}</g:link>
+                        </g:if>
+                        <g:else>
+                            <g:link class="btn" controller="userManagement" action="home" params="[categoryId: category.id]">${category.name}</g:link>
+                        </g:else>
+                    </g:each>
                     <g:link class="btn btn-primary" controller="category" action="create">${message(code: "musement.category.add")}</g:link>
                 </sec:ifAllGranted>
                 <sec:ifAllGranted roles="ROLE_USER">
+                    <g:each in="${user.categories.sort{a,b-> a.id.compareTo(b.id)}}" var="category">
+                        <g:if test="${category.id == params.getInt("categoryId")}">
+                            <g:link class="btn btn-success" controller="userManagement" action="home" params="[categoryId: category.id]">${category.name}</g:link>
+                        </g:if>
+                        <g:else>
+                            <g:link class="btn" controller="userManagement" action="home" params="[categoryId: category.id]">${category.name}</g:link>
+                        </g:else>
+                    </g:each>
                     <g:link class="btn btn-primary" controller="category" action="subscribe">${message(code: "musement.category.subscribe")}</g:link>
                 </sec:ifAllGranted>
             </div>
