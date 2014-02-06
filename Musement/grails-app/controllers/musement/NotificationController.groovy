@@ -12,15 +12,6 @@ class NotificationController {
     NotificationService notificationService
 
     @Secured(['IS_AUTHENTICATED_FULLY'])
-    def addPost(Post myPost){
-
-      User currentUser =  (User)springSecurityService.getCurrentUser()
-        currentUser.notification.addToPosts(myPost)
-        notificationService.updateNotification(currentUser.notification)
-
-
-    }
-    @Secured(['IS_AUTHENTICATED_FULLY'])
     def readPostByPost(Post myPost){
         User currentUser =  (User)springSecurityService.getCurrentUser()
 
@@ -76,7 +67,7 @@ class NotificationController {
         for (post in currentUser.notification.posts){
             if(!map.containsKey(post.getCategory().name)){
                 map.put(post.getCategory().name,1)
-                map_user.put(post.getCategory().name, post.sender())
+                map_user.put(post.getCategory().name, post.sender)
             }
             else
                 map[post.getCategory().name] = map.get(post.getCategory().name) +1
