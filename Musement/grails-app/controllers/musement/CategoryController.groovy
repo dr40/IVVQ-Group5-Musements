@@ -52,7 +52,7 @@ class CategoryController {
         //categoryInstance.save flush: true
         categoryService.addCategory(categoryInstance)
 
-        render(view: '../userManagement/home', model: [user: springSecurityService.currentUser, categoryId: categoryInstance.id])
+        redirect(controller: "userManagement", action: "home", params:[categoryId: categoryInstance.id])
     }
 
     @Secured(['ROLE_ADMIN'])
