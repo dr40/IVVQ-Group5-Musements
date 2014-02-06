@@ -36,32 +36,39 @@
     </div>
 </div>
 
-<div class="container" style="margin-top: 50px">
+<div class="container" style="margin-top: 40px;">
 
     <!-- Alerts Info/Error -->
     <g:render template="../userManagement/alerts" model="[user: user]"/>
 
-    <div class="pull-left" style="text-align: center; width: 30%; margin: 20px auto">
+    <div class="pull-left" style="text-align: center; width: 27%; margin: 20px auto; position: fixed">
         <h1>${user?.username}</h1>
         <h3>${user?.email}</h3>
 
-        <div class="well well-small">
-            <ul class="btn-group-vertical">
-                <g:each in="${user.categories}" var="category">
-                    <li class="btn" ><g:link controller="posts" action="getPosts" params="[currentCategory: category]">${category.name}</g:link></li>
+        <div class="well well-large">
+            <div class="btn-group-vertical">
+                <g:each in="${user.categories.sort{a,b-> a.id.compareTo(b.id)}}" var="category">
+                    <g:if test="${category.id == params.getInt("categoryId")}">
+                        <g:link class="btn btn-success" controller="userManagement" action="home" params="[categoryId: category.id]">${category.name}</g:link>
+                    </g:if>
+                    <g:else>
+                        <g:link class="btn" controller="userManagement" action="home" params="[categoryId: category.id]">${category.name}</g:link>
+                    </g:else>
                 </g:each>
-            </ul>
+                <sec:ifAllGranted roles="ROLE_ADMIN">
+                    <g:link class="btn btn-primary" controller="category" action="create">${message(code: "musement.category.add")}</g:link>
+                </sec:ifAllGranted>
+                <sec:ifAllGranted roles="ROLE_USER">
+                    <g:link class="btn btn-primary" controller="category" action="subscribe">${message(code: "musement.category.subscribe")}</g:link>
+                </sec:ifAllGranted>
+            </div>
         </div>
     </div>
 
-    <div class="pull-right" style="text-align: center; width: 50%; margin: 20px auto">
-        <ul>
-            <li>Test</li>
-            <li>Test</li>
-            <li>Test</li>
-            <li>Test</li>
-            <li>Test</li>
-        </ul>
+    <div class="pull-right" style="width: 67%; border-left: thin solid #1b1b1b; overflow: auto;">
+        <div style="margin: 20px auto auto 20px">
+            <g:include controller="post" action="getPosts" params='[categoryId: categoryId]' />
+        </div>
     </div>
 
 </div> <!-- /container -->
