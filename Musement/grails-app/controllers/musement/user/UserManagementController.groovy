@@ -109,7 +109,8 @@ class UserManagementController {
      */
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def home() {
-        render(view: 'home', model: [user: springSecurityService.currentUser])
+        def catId = (params.containsKey('categoryId') ?  params.categoryId : Category.findByName("Musement").id)
+        render(view: 'home', model: [user: springSecurityService.currentUser, categoryId: catId])
     }
 
     /**
