@@ -12,29 +12,6 @@ class NotificationController {
     NotificationService notificationService
 
     @Secured(['IS_AUTHENTICATED_FULLY'])
-    def readPostByPost(Post myPost){
-        User currentUser =  (User)springSecurityService.getCurrentUser()
-
-        if (currentUser.notification.posts.contains(myPost)){
-             currentUser.notification.removeFromPosts(myPost)
-              notificationService.updateNotification(currentUser.notification)
-        }
-    }
-    @Secured(['IS_AUTHENTICATED_FULLY'])
-    def readPostByCategory(Category myCategory){
-        User currentUser =  (User)springSecurityService.getCurrentUser()
-        if(currentUser.notification.posts.category.contains(myCategory)){
-            for(post in currentUser.notification.posts){
-                if (post.getCategory().equals(myCategory)){
-                    currentUser.notification.removeFromPosts(post)
-                    notificationService.updateNotification(currentUser.notification)
-                }
-            }
-        }
-
-    }
-
-    @Secured(['IS_AUTHENTICATED_FULLY'])
     def notificationsNumber(){
         User currentUser =  (User)springSecurityService.getCurrentUser()
         def listPosts = currentUser.notification.posts*.getCategory()
@@ -43,18 +20,6 @@ class NotificationController {
             if(!listCat.contains(list))
                 listCat.add(list)
         [notificationsNumber : listCat.size()]
-    }
-
-    @Secured(['IS_AUTHENTICATED_FULLY'])
-    def index(Integer max) {
-   /*     params.max = Math.min(max ?: 10, 100)
-        respond Notification.list(params), model: [notificationInstanceCount: Notification.count()]*/
-        User currentUser =  (User)springSecurityService.getCurrentUser()
-        def notificationInstanceList = currentUser.notification.posts
-        if(notificationInstanceList)
-        [notificationInstanceList: notificationInstanceList, notificationInstanceCount: notificationInstanceList.size()]
-        else
-            render(view:"index")
     }
 
 
@@ -82,9 +47,9 @@ class NotificationController {
         }
         [notifications: notifications]
 
-
+    }
     }
 
 
 
-}
+
