@@ -10,33 +10,37 @@ class NotificationController {
 
     SpringSecurityService springSecurityService
     NotificationService notificationService
+
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def addPost(Post myPost){
 
       User currentUser =  (User)springSecurityService.getCurrentUser()
         currentUser.notification.addToPosts(myPost)
         notificationService.updateNotification(currentUser.notification)
 
-        [currentUser: currentUser]
-    }
 
-    def PostRead(Post myPost){
+    }
+    @Secured(['IS_AUTHENTICATED_FULLY'])
+    def readPost(Post myPost){
         User currentUser =  (User)springSecurityService.getCurrentUser()
 
-        if (currentUser.notification.posts.contains(myPost))
+        if (currentUser.notification.posts.contains(myPost)){
              currentUser.notification.removeFromPosts(myPost)
-
-        [currentUser: currentUser]
+              notificationService.updateNotification(currentUser.notification)
+        }
     }
-
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def readPost(Category myCategory){
         User currentUser =  (User)springSecurityService.getCurrentUser()
         if(currentUser.notification.posts.category.contains(myCategory)){
             for(post in currentUser.notification.posts){
-                if (post.getCategory().equals(myCategory))
+                if (post.getCategory().equals(myCategory)){
                     currentUser.notification.removeFromPosts(post)
+                    notificationService.updateNotification(currentUser.notification)
+                }
             }
         }
-        [currentUser: currentUser]
+
     }
 
     @Secured(['IS_AUTHENTICATED_FULLY'])
@@ -62,10 +66,7 @@ class NotificationController {
             render(view:"index")
     }
 
-    def show(Notification notificationInstance) {
-        respond notificationInstance
 
-    }
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def showNotifications(){
         User currentUser =  (User)springSecurityService.getCurrentUser()
@@ -91,15 +92,6 @@ class NotificationController {
         [notifications: notifications]
 
 
-    }
-    def create() {
-        respond new Notification(params)
-    }
-
-
-
-    def edit(Notification notificationInstance) {
-        respond notificationInstance
     }
 
 
