@@ -23,7 +23,7 @@ class PostService {
         if (p.validate()) {
             /* Save */
             p.save flush:true
-            notificationService.Notify(p);
+            notificationService.notifyUsers(p);
         } else {
             p = null;
         }
