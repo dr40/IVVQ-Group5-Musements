@@ -127,11 +127,14 @@ grails.plugin.springsecurity.password.algorithm = 'bcrypt'
 
 // Enable default logout controller
 grails.plugin.springsecurity.logout.postOnly = false
-//grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/secure/anonymous'
-//grails.plugin.springsecurity.password.hash.iterations = 1
+
+// Redirect after successful login
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/userManagement/home'
 
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
+    '/**/home.gsp':                   ['permitAll'],
+    '/**/home':                       ['permitAll'],
 	'/index':                         ['permitAll'],
 	'/index.gsp':                     ['permitAll'],
 	'/**/js/**':                      ['permitAll'],
