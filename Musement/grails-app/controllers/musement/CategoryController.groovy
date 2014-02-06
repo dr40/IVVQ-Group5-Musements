@@ -20,9 +20,9 @@ class CategoryController {
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
 
-            params.max = Math.min(max ?: 10, 100)
-            params.max = Math.min(max ?: 10, 100)
-            respond Category.list(params), model: [categoryInstanceCount: Category.count()]
+        params.max = Math.min(max ?: 10, 100)
+        params.max = Math.min(max ?: 10, 100)
+        respond Category.list(params), model: [categoryInstanceCount: Category.count()]
 
     }
 
@@ -52,13 +52,7 @@ class CategoryController {
         //categoryInstance.save flush: true
         categoryService.addCategory(categoryInstance)
 
-        request.withFormat {
-            form {
-                flash.message = message(code: 'default.created.message', args: [message(code: categoryInstance.name, default: 'Category'), categoryInstance.id])
-                redirect categoryInstance
-            }
-            '*' { respond categoryInstance, [status: CREATED] }
-        }
+        render(view: '../userManagement/home', model: [user: springSecurityService.currentUser, categoryId: categoryInstance.id])
     }
 
     @Secured(['ROLE_ADMIN'])
@@ -131,5 +125,30 @@ class CategoryController {
         }
         false
 
+    }
+
+    @Secured(['IS_AUTHENTICATED_FULLY'])
+    def subscribe() {
+        User user = springSecurityService.currentUser
+        render(view: '/category/subscribe', model: [user: user])
+    }
+
+    @Secured(['IS_AUTHENTICATED_FULLY'])
+    def doSubscribe() {
+        User user = springSecurityService.currentUser
+
+        user.categories.clear()
+        user.addToCategories(Category.findAll().first())
+
+        params.categories.each(){
+            def Category category = Category.get(it)
+            user.addToCategories(category)
+        }
+
+        user.save()
+
+        println user.categories
+
+        redirect uri: '/userManagement/home'
     }
 }

@@ -19,6 +19,7 @@ class PostService {
         Post p = new Post(content: content);
         sender.addToPosts(p);
         toCategory.addToPosts(p);
+        toCategory.save flush:true
         if (p.validate()) {
             /* Save */
             p.save flush:true
