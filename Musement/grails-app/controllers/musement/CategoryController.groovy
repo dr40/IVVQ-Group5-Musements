@@ -155,6 +155,6 @@ class CategoryController {
 
         println user.categories
 
-        render(view: '/userManagement/home', model: [user: user])
+        redirect uri: '/userManagement/home'
     }
 }
