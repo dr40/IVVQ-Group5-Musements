@@ -24,7 +24,6 @@ class ControlPanelController {
 
     def manageCategories() {
         def catId = (params.containsKey('categoryId') ?  params.categoryId : 1)
-
         render(view: '/controlPanel/manageCategories', params:[categoryId: catId])
     }
 
