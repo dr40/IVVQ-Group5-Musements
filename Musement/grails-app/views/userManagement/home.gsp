@@ -18,6 +18,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
             <a class="brand" href="/Musement">Musement</a>
             <sec:ifLoggedIn>
@@ -31,6 +32,9 @@
                             </g:link>
                             <g:include controller="notification" action="showNotifications" />
                         </li>
+                        <sec:ifAllGranted roles="ROLE_ADMIN">
+                            <li><g:link controller="controlPanel" action="index" ><g:message code="musement.control.panel"/></g:link></li>
+                        </sec:ifAllGranted>
                         <li><g:link controller="userManagement" action="update" ><g:message code="musement.user.update"/></g:link></li>
                         <li><g:link controller="logout" ><g:message code="musement.logout"/></g:link></li>
                     </ul>

@@ -74,6 +74,16 @@ class UserManagementController {
     }
 
     /**
+     * Delete users own account
+     * @return Logout page
+     */
+    @Secured(['IS_AUTHENTICATED_FULLY'])
+    def unregister() {
+        userAccountService.deleteUser(springSecurityService.currentUser)
+        redirect controller: 'logout'
+    }
+
+    /**
      * Method for updating current user password
      * @return  The current user updated
      */
@@ -82,8 +92,8 @@ class UserManagementController {
         flash.clear()
         User user = (User) springSecurityService.getCurrentUser()
 
+        // If the request is not POST, return
         if (!request.post) {
-            // display default view
             return [user: user]
         }
 
@@ -102,8 +112,9 @@ class UserManagementController {
             render(view: '/userManagement/update', model: [user: user])
         } else {
             springSecurityService.reauthenticate user.username
-            render(view: '/userManagement/home', model: [user: user])
             flash.info = message(code: 'musement.user.update.success')
+
+            render(view: '/userManagement/home', model: [user: user])
         }
     }
 
@@ -125,11 +136,34 @@ class UserManagementController {
 
     /**
      * Method for deleting an user. Should only be used by admin
-     * @param user  The user to be deleted
+     * @return Reloads the Control Panel controller
      */
     @Secured(['ROLE_ADMIN'])
-    def deleteUser(User user) {
-        userAccountService.deleteUser(user)
-        redirect controller: 'logout'
+    def deleteUser() {
+        if (params.containsKey("userId")) {
+            User user = User.findById(params.userId)
+
+            if (user.validate()) {
+                User currentUser = springSecurityService.currentUser
+
+                if (currentUser.equals(user)) {
+                    flash.message = message(code: "musement.control.panel.users.cannot.delete")
+                    redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+                    return;
+                } else {
+                    // Finally delete the user
+                    userAccountService.deleteUser(user)
+
+                    flash.info = message(code: "musement.control.panel.users.deleted")
+                    redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+                    return;
+                }
+            }
+        }
+
+        // If we got this point, we encountered errors
+        flash.message = message(code: "musement.control.panel.users.null")
+        redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
     }
+
 }

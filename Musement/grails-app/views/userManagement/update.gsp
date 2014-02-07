@@ -32,39 +32,44 @@
     <!-- Alerts Info/Error -->
     <g:render template="alerts" model="[user: user]"/>
 
-    <sec:ifLoggedIn>
-        <g:form class="hero-unit" controller="userManagement" action="update" style="width: 300px; margin: auto">
-            <fieldset>
+    <sec:ifLoggedIn >
+        <div class="hero-unit" style="width: 300px; margin: auto">
+            <g:form controller="userManagement" action="update" >
+                <fieldset>
 
-                <div class="form-group">
-                    <h3>${user.username}</h3>
-                </div>
-                <div class="form-group">
-                    <h4>${user.email}</h4>
-                </div>
+                    <div class="form-group">
+                        <h3>${user.username}</h3>
+                    </div>
+                    <div class="form-group">
+                        <h4>${user.email}</h4>
+                    </div>
 
-                <div class="form-group">
-                    <input type="password" class="form-control"
-                           id="password" placeholder='${message(code: "musement.user.update.password.old")}' name="password">
-                </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control"
+                               id="password" placeholder='${message(code: "musement.user.update.password.old")}' name="password">
+                    </div>
 
-                <div class="form-group">
-                    <input type="password" class="form-control"
-                           id="password2" placeholder='${message(code: "musement.user.update.password.new")}' name="password2">
-                </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control"
+                               id="password2" placeholder='${message(code: "musement.user.update.password.new")}' name="password2">
+                    </div>
 
-                <div class="form-group">
-                    <input type="password" class="form-control"
-                           id="password3" placeholder='${message(code: "musement.user.register.password2")}' name="password3">
-                </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control"
+                               id="password3" placeholder='${message(code: "musement.user.register.password2")}' name="password3">
+                    </div>
 
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary"><g:message code="musement.user.update"/></button>
-                    <button type="button" class="btn btn-warning" onclick="window.history.back()"><g:message code="musement.user.cancel"/></button>
-                </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary"><g:message code="musement.user.update"/></button>
+                        <button type="button" class="btn btn-warning" onclick="window.history.back()"><g:message code="musement.user.cancel"/></button>
+                    </div>
 
-            </fieldset>
-        </g:form>
+                </fieldset>
+            </g:form>
+
+            <!-- Delete account -->
+            <g:link class="btn btn-danger" controller="userManagement" action="unregister" ><g:message code="musement.user.unregister"/></g:link>
+        </div>
     </sec:ifLoggedIn>
 
 </div> <!-- /container -->

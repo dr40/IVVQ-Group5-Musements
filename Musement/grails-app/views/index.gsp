@@ -10,11 +10,13 @@
         <div class="container">
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
             <a class="brand" href="/Musement">Musement</a>
             <sec:ifLoggedIn>
                 <div class="nav-collapse collapse">
                     <ul class="nav navbar-nav">
+                        <li><g:link controller="userManagement" action="home" ><g:message code="musement.user.home"/></g:link></li>
                         <li><g:link controller="logout" ><g:message code="musement.logout"/></g:link></li>
                     </ul>
                 </div>
