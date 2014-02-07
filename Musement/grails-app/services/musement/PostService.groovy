@@ -30,4 +30,14 @@ class PostService {
         return p;
     }
 
+    Boolean deletePost(Post post) {
+        User sender = post.getSender();
+        sender.removeFromPosts(post);
+        sender.save(flush:true)
+        Category category = post.getCategory()
+        category.removeFromPosts(post);
+        category.save(flush:true)
+        post.delete()
+        return true
+    }
 }
