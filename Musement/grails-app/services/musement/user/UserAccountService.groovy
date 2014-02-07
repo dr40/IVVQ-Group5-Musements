@@ -1,6 +1,7 @@
 package musement.user
 
 import grails.transaction.Transactional
+import musement.Category
 
 @Transactional
 class UserAccountService {
@@ -33,6 +34,14 @@ class UserAccountService {
             UserRole.create(user, mainRole)
         }
         user
+    }
+
+    void updateAdminCategories(Category category) {
+        User admin = User.findByUsername("admin")
+        if (admin) {
+            admin.addToCategories(category)
+            admin.save(flush: true)
+        }
     }
 
     /**
