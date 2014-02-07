@@ -10,7 +10,10 @@
 <div style="padding:8px;background-color:#DFDFDF">
     <div style="border: 1px solid #CFCFCF;">
         <div style="background-color:white;padding:8px;">
-            <%=post.content.encodeAsHTML().replaceAll("\n", "<br>")%>
+            <%
+                def postContent = post.content.encodeAsHTML().replaceAll("\n", "<br>");
+            %>
+            <g:message code="musement.post._post.content" args="[postContent]" encodeAs="None" />
         </div>
         <div style="background-color:#EAEAEA;color:#AEAEAE;text-align:right;padding:8px;font-size:10px;">
             <div style="float:left;">
