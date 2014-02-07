@@ -30,8 +30,7 @@ class PostService {
         return p;
     }
 
-    Boolean deletePost(Post post) {
-        def postId = post.id;
+    Boolean deletePost(Post post, boolean flush = true) {
         User sender = post.getSender();
         sender.removeFromPosts(post);
         sender.save()
@@ -52,7 +51,12 @@ class PostService {
                 n.save()
             }
         }
-        post.delete(flush: true)
+        if (flush) {
+            post.delete(flush: true)
+        } else {
+            post.delete()
+        }
         return true
     }
+
 }
