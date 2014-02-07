@@ -31,13 +31,28 @@ class PostService {
     }
 
     Boolean deletePost(Post post) {
+        def postId = post.id;
         User sender = post.getSender();
         sender.removeFromPosts(post);
-        sender.save(flush:true)
+        sender.save()
         Category category = post.getCategory()
         category.removeFromPosts(post);
-        category.save(flush:true)
-        post.delete()
+        category.save()
+        Notification.list().each {n ->
+            def postToRemove = [];
+            n.posts.each {p ->
+                if (p.id == post.id) {
+                    postToRemove.add(p);
+                }
+            }
+            if (postToRemove.size() > 0) {
+                for(Post p : postToRemove) {
+                    n.posts.remove (p);
+                }
+                n.save()
+            }
+        }
+        post.delete(flush: true)
         return true
     }
 }
