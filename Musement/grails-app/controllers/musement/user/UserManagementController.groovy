@@ -43,14 +43,14 @@ class UserManagementController {
             // Get selected categories
             List selectedCategories = new ArrayList()
 
-            if (params.list("categories"))
-                params.list("categories").each { selectedCategories.add(it) }
+            if (params.list("cats"))
+                params.list("cats").each { selectedCategories.add(it) }
 
             // Add default category
             selectedCategories.add("Musement")
             selectedCategories.each {
                 Category cat = Category.findByName(it.toString())
-                if (cat)
+                if (cat.validate())
                     user.addToCategories(cat)
             }
 
