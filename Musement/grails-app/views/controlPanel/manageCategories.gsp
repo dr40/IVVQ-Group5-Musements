@@ -12,7 +12,7 @@
                     <g:link class="btn btn-success" controller="controlPanel" action="index" params='[editMode: "category", categoryId: category.id]'>${category.name}</g:link>
                 </g:if>
                 <g:else>
-                    <g:link class="btn" controller="controlPanel" action="index" params='[editMode: "category", categoryId: category.id]' >${category.name}</g:link>
+                    <g:link class="btn" controller="controlPanel" action="index" params='[editMode: "category", categoryId: category.id]'>${category.name}</g:link>
                 </g:else>
             </g:each>
         </div>
@@ -23,17 +23,11 @@
     <div style="margin: 50px auto auto 50px">
         <div class="hero-unit">
             <g:set var="cat" value="${Category.findById(params.getInt('categoryId'))}" />
-            <g:set var="catnr" value="${cat.users.size()}" />
-            <g:set var="postnr" value="${cat.posts.size()}" />
-            <div class="badge-info">
-                <span>${message(code: "musement.control.panel.categories.users")}</span>
-                <span>${catnr}</span>
-            </div>
-            <div class="badge-info">
-                <span>${message(code: "musement.control.panel.categories.posts")}</span>
-                <span>${postnr}</span>
-            </div>
-        <g:link class="btn btn-danger"  controller="category" action="deleteCategory" onclick="return confirm(${message(code: "musement.control.panel.categories.sure")})" params='[categoryId: cat.id]' >${message(code: "musement.control.panel.categories.delete")}</g:link>
+            <h4 class="alert alert-info">${cat.description}</h4>
+            <h4>${message(code: "musement.control.panel.categories.users")}<span class="badge badge-info" >${cat.users.size()}</span></h4>
+            <h4>${message(code: "musement.control.panel.categories.posts")}<span class="badge badge-info" >${cat.posts.size()}</span></h4>
+            <g:link class="btn btn-danger" controller="category" action="deleteCategory" onclick="return confirm(${message(code: "musement.control.panel.categories.sure")})" params='[categoryId: cat.id]'>${message(code: "default.button.delete.label")}</g:link>
+            <g:link class="btn btn-warning" url="[resource: cat, action: 'edit']" controller="category">${message(code: "default.button.update.label")}</g:link>
         </div>
     </div>
 </div>
