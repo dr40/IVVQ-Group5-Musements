@@ -10,6 +10,7 @@ class BootStrapService {
 
     def dataSource
     UserAccountService userAccountService
+    CategoryService categoryService
 
     Role normalRole
     Role adminRole
@@ -43,10 +44,8 @@ class BootStrapService {
         musement = Category.findByName("Musement")
         if (!musement) {
             musement = new Category(name: 'Musement', description: 'Default Musement Category. Here you can see everything.')
-            musement.save()
+            categoryService.addCategory(musement)
         }
-
-        new Category(name: 'Test', description: 'Test').save()
     }
 
     def initializeDefaultUsers() {

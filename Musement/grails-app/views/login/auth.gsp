@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="layout" content="../layouts/musement"/>
+    <meta name="layout" content="musement"/>
     <title>Musement | Login</title>
 </head>
 <body>
