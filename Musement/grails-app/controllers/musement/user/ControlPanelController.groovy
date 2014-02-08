@@ -10,7 +10,9 @@ import musement.CategoryService
  */
 @Secured(['ROLE_ADMIN'])
 class ControlPanelController {
+    /** Services **/
     CategoryService categoryService
+
     /**
      * Load Control Panel main view. By default in category edit mode.
      */
@@ -22,26 +24,22 @@ class ControlPanelController {
         render(view: '/controlPanel/index', params:[editMode: editMode, categoryId: catId, userId: userId])
     }
 
+    /**
+     * Load Control Panel ManageCategories view.
+     * @return Load Category page.
+     */
     def manageCategories() {
         def catId = (params.containsKey('categoryId') ?  params.categoryId : 1)
         render(view: '/controlPanel/manageCategories', params:[categoryId: catId])
     }
 
+    /**
+     * Load Control Panel ManageUsers view
+     * @return Load User page.
+     */
     def manageUsers() {
         def userId = (params.containsKey('userId') ?  params.userId : 1)
 
         render(view: '/controlPanel/manageUsers', params:[ userId: userId])
-    }
-
-   def deleteCategories(){
-
-       def catId = (params.containsKey('categoryId') ?  params.categoryId : 1)
-       def userId = (params.containsKey('userId') ?  params.userId : 1)
-       def editMode = (params.containsKey('editMode') ?  params.editMode : 'category')
-       Category c = Category.findById(params.get("categoryId"))
-       if(c.validate())
-           categoryService.deleteCategory(c)
-       render(view: '/controlPanel/index', params:[editMode: editMode, categoryId: catId, userId: userId])
-
     }
 }

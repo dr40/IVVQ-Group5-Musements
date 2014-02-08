@@ -9,10 +9,10 @@
         ${params.put("editMode", "category")}
     </g:if>
     <g:if test='${params.containsKey("categoryId") == false}'>
-        ${params.categoryId = 1}
+        ${params.put("categoryId", 1)}
     </g:if>
     <g:if test='${params.containsKey("userId") == false}'>
-        ${params.userId = 1}
+        ${params.put("userId", 1)}
     </g:if>
 </head>
 <body>
