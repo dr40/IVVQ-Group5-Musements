@@ -2,7 +2,7 @@
 
 <g:form role="form" controller="post" action="deletePost">
     <g:hiddenField id="delete-postId" name="postId" value="${postId}"/>
-    <g:hiddenField id="delete-postId" name="categoryId" value="${categoryId}"/>
+    <g:hiddenField name="categoryId" value="${categoryId}"/>
     <div class="modal fade" id="removePostConfirm" tabindex="-1" role="dialog" aria-labelledby="deletePostLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
