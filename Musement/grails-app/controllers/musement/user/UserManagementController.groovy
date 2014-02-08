@@ -205,7 +205,16 @@ class UserManagementController {
             redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
         }
 
+        // Redirect in case of own demotion
         userAccountService.updateUser(user, Roles.ROLE_USER.role)
+        User currentUser = springSecurityService.currentUser
+        if (currentUser.equals(user)) {
+            springSecurityService.reauthenticate user.username
+
+            flash.info = message(code: "musement.control.panel.users.admin.removed", args: [user.username])
+            redirect(controller: 'userManagement', action: 'home')
+            return
+        }
 
         flash.info = message(code: "musement.control.panel.users.admin.removed", args: [user.username])
         redirect( controller: "controlPanel", action: "index", params:[editMode: "user", userId: user.id])
