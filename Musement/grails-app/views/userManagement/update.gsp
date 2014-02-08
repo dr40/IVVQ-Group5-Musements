@@ -45,18 +45,30 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="password" class="form-control"
-                               id="password" placeholder='${message(code: "musement.user.update.password.old")}' name="password">
+                        <input type="password" class="form-control" id="password" name="password"
+                               pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6,}$"
+                               required="required"
+                               oninvalid="setCustomValidity(${message(code: "musement.user.password.strenght")})"
+                               oninput="setCustomValidity('')"
+                               placeholder='${message(code: "musement.user.update.password.old")}' >
                     </div>
 
                     <div class="form-group">
-                        <input type="password" class="form-control"
-                               id="password2" placeholder='${message(code: "musement.user.update.password.new")}' name="password2">
+                        <input type="password" class="form-control" id="password2" name="password2"
+                               pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6,}$"
+                               required="required"
+                               oninvalid="setCustomValidity(${message(code: "musement.user.password.strenght")})"
+                               oninput="setCustomValidity('')"
+                               placeholder='${message(code: "musement.user.update.password.new")}' >
                     </div>
 
                     <div class="form-group">
-                        <input type="password" class="form-control"
-                               id="password3" placeholder='${message(code: "musement.user.register.password2")}' name="password3">
+                        <input type="password" class="form-control" id="password3" name="password3"
+                               pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6,}$"
+                               required="required"
+                               oninvalid="setCustomValidity(${message(code: "musement.user.password.strenght")})"
+                               oninput="setCustomValidity('')"
+                               placeholder='${message(code: "musement.user.register.password2")}' >
                     </div>
 
                     <div class="form-group">
