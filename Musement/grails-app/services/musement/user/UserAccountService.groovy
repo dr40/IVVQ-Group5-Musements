@@ -36,11 +36,21 @@ class UserAccountService {
         user
     }
 
+    /**
+     * Each time a category is created (by admin only), it will be added
+     * as being subscribed to all admins
+     * @param category
+     */
     void updateAdminCategories(Category category) {
-        User admin = User.findByUsername("admin")
-        if (admin) {
-            admin.addToCategories(category)
-            admin.save(flush: true)
+        def admins = UserRole.findAllByRole(Roles.ROLE_ADMIN.role)
+
+        if (admins && admins.size() > 0) {
+            admins.each { admin ->
+                if (admin.user.validate()) {
+                    admin.user.addToCategories(category)
+                    admin.user.save(flush: true)
+                }
+            }
         }
     }
 

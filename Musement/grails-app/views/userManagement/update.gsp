@@ -68,7 +68,7 @@
             </g:form>
 
             <!-- Delete account -->
-            <g:link class="btn btn-danger" controller="userManagement" action="unregister" ><g:message code="musement.user.unregister"/></g:link>
+            <g:link class="btn btn-danger" controller="userManagement" action="unregister" onclick="return confirm(${message(code: "musement.user.delete.account")})" ><g:message code="musement.user.unregister"/></g:link>
         </div>
     </sec:ifLoggedIn>
 

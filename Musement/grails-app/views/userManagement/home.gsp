@@ -49,7 +49,7 @@
     <!-- Alerts Info/Error -->
     <g:render template="../userManagement/alerts" model="[user: user]"/>
 
-    <div class="pull-left" style="text-align: center; width: 27%; margin: 20px auto; position: fixed;">
+    <div class="pull-left" style="text-align: center; width: 27%; margin: 20px auto; overflow: auto;">
         <h1>${user?.username}</h1>
         <h3>${user?.email}</h3>
 
@@ -81,7 +81,7 @@
         </div>
     </div>
 
-    <div class="pull-right" style="width: 67%; border-left: thin solid #1b1b1b; overflow: auto;">
+    <div class="pull-right" style="width: 67%; overflow: auto;">
         <div style="margin: 20px auto auto 20px">
             <g:include controller="post" action="getPosts" params='[categoryId: categoryId]' />
         </div>

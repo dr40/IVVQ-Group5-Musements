@@ -58,26 +58,42 @@
                 <g:form class="hero-unit" controller="userManagement" action="doRegister" style="width: 300px; margin: auto">
                     <fieldset>
 
-                        <div class="form-group">
+                        <div class="form-group fieldcontain ${hasErrors(bean: user, field: 'email', 'error')} required">
                             <input type="text" class="form-control" id="email" name="email"
                                    placeholder='${message(code: "musement.user.register.email")}'
+                                   pattern="^[_A-Za-z0-9-]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"
+                                   required="required"
+                                   oninvalid="this.setCustomValidity(${message(code: 'musement.user.register.email.match')})"
+                                   oninput="setCustomValidity('')"
                                    value="${fieldValue(bean: user, field: 'email')}">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group fieldcontain ${hasErrors(bean: user, field: 'username', 'error')} required">
                             <input type="text" class="form-control" id="username" name="username"
                                    placeholder='${message(code: "musement.username")}'
+                                   pattern="^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*$"
+                                   required="required"
+                                   oninvalid="setCustomValidity(${message(code: "musement.user.register.username.match")})"
+                                   oninput="setCustomValidity('')"
                                    value="${fieldValue(bean: user, field: 'username')}">
                         </div>
 
 
-                        <div class="form-group">
+                        <div class="form-group fieldcontain ${hasErrors(bean: user, field: 'password', 'error')} required">
                             <input type="password" class="form-control" id="password" name="password"
+                                   pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6,}$"
+                                   required="required"
+                                   oninvalid="setCustomValidity(${message(code: "musement.user.password.strenght")})"
+                                   oninput="setCustomValidity('')"
                                    placeholder='${message(code: "musement.password")}' >
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group fieldcontain ${hasErrors(bean: user, field: 'password', 'error')} required">
                             <input type="password" class="form-control" id="password2" name="password2"
+                                   pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6,}$"
+                                   required="required"
+                                   oninvalid="setCustomValidity(${message(code: "musement.user.password.strenght")})"
+                                   oninput="setCustomValidity('')"
                                    placeholder='${message(code: "musement.user.register.password2")}'>
                         </div>
 
