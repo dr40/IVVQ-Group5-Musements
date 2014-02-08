@@ -46,10 +46,7 @@
 
                     <div class="form-group">
                         <input type="password" class="form-control" id="password" name="password"
-                               pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6,}$"
                                required="required"
-                               oninvalid="setCustomValidity(${message(code: "musement.user.password.strenght")})"
-                               oninput="setCustomValidity('')"
                                placeholder='${message(code: "musement.user.update.password.old")}' >
                     </div>
 
