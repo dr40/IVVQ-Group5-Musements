@@ -36,8 +36,8 @@ class CategoryController {
         respond new Category(params)
     }
 
+
     @Secured(['ROLE_ADMIN'])
-    @Transactional
     def save(Category categoryInstance) {
         if (categoryInstance == null) {
             notFound()
@@ -52,7 +52,7 @@ class CategoryController {
         //categoryInstance.save flush: true
         categoryService.addCategory(categoryInstance)
 
-        render(view: '../userManagement/home', model: [user: springSecurityService.currentUser, categoryId: categoryInstance.id])
+        redirect(controller: 'userManagement', action: 'home', model: [user: springSecurityService.currentUser, categoryId: categoryInstance.id])
     }
 
     @Secured(['ROLE_ADMIN'])
@@ -151,4 +151,34 @@ class CategoryController {
 
         redirect uri: '/userManagement/home'
     }
+
+
+
+    @Secured(['ROLE_ADMIN'])
+    def deleteCategory() {
+        if (params.containsKey("categoryId")){
+
+            Category cat = Category.findById(params.categoryId)
+
+            if (cat == null){
+                notFound()
+                redirect( controller: "controlPanel", action: "index", params:[editMode: "category"])
+            }else{
+                if(cat.id == 1)
+                {
+                    flash.info = message(code: "musement.control.panel.categories.cannot.delete")
+                    redirect( controller: "controlPanel", action: "index", params:[editMode: "category"])
+                }else{
+                    categoryService.deleteCategory(cat)
+                    flash.info = message(code: "musement.control.panel.categories.deleted")
+                    redirect( controller: "controlPanel", action: "index", params:[editMode: "category"])
+                }}
+        }else{
+            flash.message = message(code: "musement.control.panel.categories.null")
+            redirect( controller: "controlPanel", action: "index", params:[editMode: "category"])
+        }
+    }
+
+
+
 }
