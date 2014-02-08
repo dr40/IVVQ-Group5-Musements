@@ -17,6 +17,7 @@ class PostController {
     SpringSecurityService springSecurityService
     PostService postService
 
+
     /**
      * @param categoryId Id of the current category
      */
@@ -25,6 +26,9 @@ class PostController {
         /* Params: currentCategory */
         User currentUser = springSecurityService.currentUser;
         Category currentCategory = Category.findById(params.categoryId);
+        if (currentCategory == null) {
+            currentCategory = Category.findById(1)
+        }
         /* Return concerned posts */
         def posts = Post.findAllByCategory(currentCategory, params).reverse();
         render(view:"/post/posts_show", model: [posts: posts, categoryId: currentCategory.id, currentUser: currentUser])
@@ -46,6 +50,7 @@ class PostController {
         render(view:"/post/post", model: [post: p, categoryId: p.getCategory().id, currentUser:currentUser, deletable:deletable])
     }
 
+
     /**
      * @param categoryId Id of the current category
      */
@@ -55,8 +60,10 @@ class PostController {
         User currentUser = springSecurityService.currentUser;
         Category currentCategory = Category.findById(params.categoryId);
         String content = params.content;
+        if (currentCategory != null) {
+            Post p = postService.sendPost(currentUser, content, currentCategory);
+        }
         /* Send post using service */
-        Post p = postService.sendPost(currentUser, content, currentCategory);
         redirect ( controller: "userManagement", action: "home", params:[categoryId: params.categoryId])
     }
 

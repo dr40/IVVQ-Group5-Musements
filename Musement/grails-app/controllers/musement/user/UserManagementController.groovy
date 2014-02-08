@@ -11,7 +11,6 @@ class UserManagementController {
     /** Services **/
     SpringSecurityService springSecurityService
     NotificationService notificationService
-
     UserAccountService userAccountService
 
     /**
@@ -20,7 +19,7 @@ class UserManagementController {
      */
     @Secured(['ROLE_ANONYMOUS'])
     def register() {
-        render(view: '/userManagement/register')
+        render(view: '/userManagement/register', model: [user: new User(params)])
     }
 
     /**
@@ -43,14 +42,14 @@ class UserManagementController {
             // Get selected categories
             List selectedCategories = new ArrayList()
 
-            if (params.list("categories"))
-                params.list("categories").each { selectedCategories.add(it) }
+            if (params.list("cats"))
+                params.list("cats").each { selectedCategories.add(it) }
 
             // Add default category
             selectedCategories.add("Musement")
             selectedCategories.each {
                 Category cat = Category.findByName(it.toString())
-                if (cat)
+                if (cat.validate())
                     user.addToCategories(cat)
             }
 
@@ -64,12 +63,6 @@ class UserManagementController {
         } else {
             redirect uri: '/login/auth'
             flash.info = message(code: 'musement.user.register.success')
-        }
-
-        println 'Registered user: ' + user.username + ' ' + params.categories
-        if (user.categories) {
-            println ' With categories: ' + user.categories.size()
-            user.categories.each {println it.name}
         }
     }
 
