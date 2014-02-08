@@ -1,7 +1,5 @@
 package musement
 
-
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 import grails.plugin.springsecurity.SpringSecurityService
@@ -36,8 +34,8 @@ class CategoryController {
         respond new Category(params)
     }
 
-
     @Secured(['ROLE_ADMIN'])
+    @Transactional
     def save(Category categoryInstance) {
         if (categoryInstance == null) {
             notFound()
@@ -76,13 +74,8 @@ class CategoryController {
         //categoryInstance.save flush: true
         categoryService.updateCategory(categoryInstance)
 
-        request.withFormat {
-            form {
-                flash.message = message(code: 'default.updated.message', args: [message(code: Category.name, default: 'Category'), categoryInstance.id])
-                redirect categoryInstance
-            }
-            '*' { respond categoryInstance, [status: OK] }
-        }
+        flash.info = message(code: "musement.category.update.success")
+        redirect(controller: "controlPanel", action: "index", params:[editMode: "category", categoryId: categoryInstance.id])
     }
 
     @Secured(['ROLE_ADMIN'])
@@ -152,8 +145,6 @@ class CategoryController {
         redirect uri: '/userManagement/home'
     }
 
-
-
     @Secured(['ROLE_ADMIN'])
     def deleteCategory() {
         if (params.containsKey("categoryId")){
@@ -178,7 +169,4 @@ class CategoryController {
             redirect( controller: "controlPanel", action: "index", params:[editMode: "category"])
         }
     }
-
-
-
 }
