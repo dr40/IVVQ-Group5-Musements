@@ -46,8 +46,15 @@ class PostController {
         } else {
             deletable = p.getSender().equals(currentUser)
         }
+        /* Check if new post: Present in notification of current user */
+        def isNewPost = false;
+        currentUser.notification.posts.each { np ->
+            if (np.id == p.id) {
+                isNewPost = true;
+            }
+        }
         /* Render post */
-        render(view:"/post/post", model: [post: p, categoryId: p.getCategory().id, currentUser:currentUser, deletable:deletable])
+        render(view:"/post/post", model: [post: p, isNewPost: isNewPost, categoryId: p.getCategory().id, currentUser:currentUser, deletable:deletable])
     }
 
 
