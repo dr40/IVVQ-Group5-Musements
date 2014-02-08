@@ -11,7 +11,7 @@
                     <h4 class="modal-title" id="deletePostLabel">Delete post</h4>
                 </div>
                 <div class="modal-body">
-                    Voulez-vous vraiment effacer le poste ?
+                    Do you really want to delete the post?
                 </div>
                 <div class="modal-footer">
                     <div style="text-align:right;">

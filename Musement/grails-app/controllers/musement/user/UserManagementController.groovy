@@ -159,4 +159,55 @@ class UserManagementController {
         redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
     }
 
+    /**
+     * The default admin can give the ROLE_ADMIN to other users also
+     * @param userId The ID of the user to be made admin
+     * @return
+     */
+    @Secured(['ROLE_ADMIN'])
+    def makeAdmin() {
+        if (!params.containsKey('userId')) {
+            flash.message = message(code: "musement.control.panel.users.null")
+            redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+            return
+        }
+
+        User user = User.findById(params.getLong('userId'))
+
+        if (!user.validate()) {
+            flash.message = message(code: "musement.control.panel.users.null")
+            redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+            return
+        }
+
+        userAccountService.updateUser(user, Roles.ROLE_ADMIN.role)
+
+        flash.info = message(code: "musement.control.panel.users.admin.made", args: [user.username])
+        redirect( controller: "controlPanel", action: "index", params:[editMode: "user", userId: user.id])
+    }
+
+    /**
+     * Remove admin rights from a user
+     * @param userId The ID of the user to be demoted
+     */
+    @Secured(['ROLE_ADMIN'])
+    def removeAdmin() {
+        if (!params.containsKey('userId')) {
+            flash.message = message(code: "musement.control.panel.users.null")
+            redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+            return
+        }
+
+        User user = User.findById(params.getLong('userId'))
+
+        if (!user.validate()) {
+            flash.message = message(code: "musement.control.panel.users.null")
+            redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+        }
+
+        userAccountService.updateUser(user, Roles.ROLE_USER.role)
+
+        flash.info = message(code: "musement.control.panel.users.admin.removed", args: [user.username])
+        redirect( controller: "controlPanel", action: "index", params:[editMode: "user", userId: user.id])
+    }
 }
