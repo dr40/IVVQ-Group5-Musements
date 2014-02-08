@@ -12,7 +12,7 @@
                     <g:link class="btn btn-success" controller="controlPanel" action="index" params='[editMode: "category", categoryId: category.id]'>${category.name}</g:link>
                 </g:if>
                 <g:else>
-                    <g:link class="btn" controller="controlPanel" action="index" params='[editMode: "category", categoryId: category.id]'>${category.name}</g:link>
+                    <g:link class="btn" controller="controlPanel" action="index" params='[editMode: "category", categoryId: category.id]' >${category.name}</g:link>
                 </g:else>
             </g:each>
         </div>
@@ -33,7 +33,7 @@
                 <span>${message(code: "musement.control.panel.categories.posts")}</span>
                 <span>${postnr}</span>
             </div>
-        <g:link class="btn btn-danger" controller="category" action="deleteCategory" params='[categoryId: cat.id]'>${message(code: "musement.control.panel.categories.delete")}</g:link>
+        <g:link class="btn btn-danger"  controller="category" action="deleteCategory" onclick="return confirm(${message(code: "musement.control.panel.categories.sure")})" params='[categoryId: cat.id]' >${message(code: "musement.control.panel.categories.delete")}</g:link>
         </div>
     </div>
 </div>

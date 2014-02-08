@@ -37,7 +37,7 @@
                     <span>${user.posts.size()}</span>
                 </g:if>
             </div>
-            <g:link class="btn btn-danger" controller="userManagement" action="deleteUser" params='[userId: params.userId]'>${message(code: "musement.control.panel.categories.delete")}</g:link>
+            <g:link class="btn btn-danger" controller="userManagement" action="deleteUser" onclick="return confirm(${message(code: "musement.control.panel.users.sure")})" params='[userId: params.userId]'>${message(code: "musement.control.panel.categories.delete")}</g:link>
         </div>
     </div>
 </div>
