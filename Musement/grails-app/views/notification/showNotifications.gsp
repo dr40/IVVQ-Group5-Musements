@@ -1,4 +1,4 @@
-
+<%@ page import="musement.Notification" %>
 <g:if test="${notifications.size() > 0}">
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
         <g:each in="${notifications}" var="notif">
