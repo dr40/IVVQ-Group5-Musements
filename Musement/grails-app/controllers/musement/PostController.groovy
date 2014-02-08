@@ -75,6 +75,27 @@ class PostController {
     }
 
     @Secured(['IS_AUTHENTICATED_FULLY'])
+    def editPost() {
+        /* Params: post */
+        User currentUser = springSecurityService.currentUser;
+        Post post = Post.findById(params.postId);
+        /* Check if can edit */
+        def canEdit = false;
+        if (SpringSecurityUtils.ifAllGranted('ROLE_ADMIN')) {
+            canEdit = true;
+        } else {
+            canEdit = post.getSender().equals(currentUser)
+        }
+        /* Edit post */
+        if (canEdit) {
+            post.content = params.newContent;
+            post.save(flush:true);
+        }
+        /* Redirect to home page */
+        redirect ( controller: "userManagement", action: "home", params:[categoryId: params.categoryId])
+    }
+
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def deletePost() {
         /* Params: post */
         User currentUser = springSecurityService.currentUser;
