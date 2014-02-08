@@ -15,3 +15,4 @@
 <g:each in="${posts}" var="post">
     <g:include controller="post" action="renderAPost" params="[categoryId:categoryId, postId: post.id]"/>
 </g:each>
+<div style="margin-bottom: 80px;"></div>
