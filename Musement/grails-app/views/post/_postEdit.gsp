@@ -1,10 +1,10 @@
 <%@ page import="musement.Post" %>
 
-<g:form role="form" controller="post" action="editPost">
-    <g:hiddenField id="edit-postId" name="postId" value="${postId}"/>
-    <g:hiddenField name="categoryId" value="${categoryId}"/>
-    <div class="modal fade" id="editPostDialog" tabindex="-1" role="dialog" aria-labelledby="editPostLabel" aria-hidden="true">
-        <div class="modal-dialog">
+<div class="modal fade" id="editPostDialog" tabindex="-1" role="dialog" aria-labelledby="editPostLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <g:form role="form" controller="post" action="editPost">
+            <g:hiddenField id="edit-postId" name="postId" value="${postId}"/>
+            <g:hiddenField name="categoryId" value="${categoryId}"/>
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -12,7 +12,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <g:textArea class="form-control" style="width:96%;" rows="5" id="edit-post-content" name="newContent" placeholder="Document content"></g:textArea>
+                        <g:textArea class="form-control" style="width:96%;display:none" rows="5" id="edit-post-content" name="newContent" placeholder="Document content"></g:textArea>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -22,14 +22,15 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </g:form>
     </div>
-</g:form>
+</div>
 
 <script>
     function showPostEdit(postId) {
         document.getElementById("edit-postId").value = postId;
         document.getElementById("edit-post-content").value = document.getElementById("post-content-" + postId).innerText;
+        $("#edit-post-content").show();
         $("#editPostDialog").modal("show");
     }
 </script>
