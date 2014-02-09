@@ -11,7 +11,6 @@ class UserManagementController {
     /** Services **/
     SpringSecurityService springSecurityService
     NotificationService notificationService
-
     UserAccountService userAccountService
 
     /**
@@ -20,7 +19,7 @@ class UserManagementController {
      */
     @Secured(['ROLE_ANONYMOUS'])
     def register() {
-        render(view: '/userManagement/register')
+        render(view: '/userManagement/register', model: [user: new User(params)])
     }
 
     /**
@@ -43,14 +42,14 @@ class UserManagementController {
             // Get selected categories
             List selectedCategories = new ArrayList()
 
-            if (params.list("categories"))
-                params.list("categories").each { selectedCategories.add(it) }
+            if (params.list("cats"))
+                params.list("cats").each { selectedCategories.add(it) }
 
             // Add default category
             selectedCategories.add("Musement")
             selectedCategories.each {
                 Category cat = Category.findByName(it.toString())
-                if (cat)
+                if (cat.validate())
                     user.addToCategories(cat)
             }
 
@@ -65,12 +64,16 @@ class UserManagementController {
             redirect uri: '/login/auth'
             flash.info = message(code: 'musement.user.register.success')
         }
+    }
 
-        println 'Registered user: ' + user.username + ' ' + params.categories
-        if (user.categories) {
-            println ' With categories: ' + user.categories.size()
-            user.categories.each {println it.name}
-        }
+    /**
+     * Delete users own account
+     * @return Logout page
+     */
+    @Secured(['IS_AUTHENTICATED_FULLY'])
+    def unregister() {
+        userAccountService.deleteUser(springSecurityService.currentUser)
+        redirect controller: 'logout'
     }
 
     /**
@@ -82,8 +85,8 @@ class UserManagementController {
         flash.clear()
         User user = (User) springSecurityService.getCurrentUser()
 
+        // If the request is not POST, return
         if (!request.post) {
-            // display default view
             return [user: user]
         }
 
@@ -102,8 +105,9 @@ class UserManagementController {
             render(view: '/userManagement/update', model: [user: user])
         } else {
             springSecurityService.reauthenticate user.username
-            render(view: '/userManagement/home', model: [user: user])
             flash.info = message(code: 'musement.user.update.success')
+
+            render(view: '/userManagement/home', model: [user: user])
         }
     }
 
@@ -125,11 +129,94 @@ class UserManagementController {
 
     /**
      * Method for deleting an user. Should only be used by admin
-     * @param user  The user to be deleted
+     * @return Reloads the Control Panel controller
      */
     @Secured(['ROLE_ADMIN'])
-    def deleteUser(User user) {
-        userAccountService.deleteUser(user)
-        redirect controller: 'logout'
+    def deleteUser() {
+        if (params.containsKey("userId")) {
+            User user = User.findById(params.userId)
+
+            if (user.validate()) {
+                User currentUser = springSecurityService.currentUser
+
+                if (currentUser.equals(user)) {
+                    flash.message = message(code: "musement.control.panel.users.cannot.delete")
+                    redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+                    return;
+                } else {
+                    // Finally delete the user
+                    userAccountService.deleteUser(user)
+
+                    flash.info = message(code: "musement.control.panel.users.deleted")
+                    redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+                    return;
+                }
+            }
+        }
+
+        // If we got this point, we encountered errors
+        flash.message = message(code: "musement.control.panel.users.null")
+        redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+    }
+
+    /**
+     * The default admin can give the ROLE_ADMIN to other users also
+     * @param userId The ID of the user to be made admin
+     * @return
+     */
+    @Secured(['ROLE_ADMIN'])
+    def makeAdmin() {
+        if (!params.containsKey('userId')) {
+            flash.message = message(code: "musement.control.panel.users.null")
+            redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+            return
+        }
+
+        User user = User.findById(params.getLong('userId'))
+
+        if (!user.validate()) {
+            flash.message = message(code: "musement.control.panel.users.null")
+            redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+            return
+        }
+
+        userAccountService.updateUser(user, Roles.ROLE_ADMIN.role)
+
+        flash.info = message(code: "musement.control.panel.users.admin.made", args: [user.username])
+        redirect( controller: "controlPanel", action: "index", params:[editMode: "user", userId: user.id])
+    }
+
+    /**
+     * Remove admin rights from a user
+     * @param userId The ID of the user to be demoted
+     */
+    @Secured(['ROLE_ADMIN'])
+    def removeAdmin() {
+        if (!params.containsKey('userId')) {
+            flash.message = message(code: "musement.control.panel.users.null")
+            redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+            return
+        }
+
+        User user = User.findById(params.getLong('userId'))
+
+        if (!user.validate()) {
+            flash.message = message(code: "musement.control.panel.users.null")
+            redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+        }
+
+        // Redirect in case of own demotion
+        userAccountService.updateUser(user, Roles.ROLE_USER.role)
+        User currentUser = springSecurityService.currentUser
+        if (currentUser.equals(user)) {
+            springSecurityService.reauthenticate user.username
+
+            flash.info = message(code: "musement.control.panel.users.admin.removed", args: [user.username])
+            redirect(controller: 'userManagement', action: 'home')
+            return
+        }
+
+        flash.info = message(code: "musement.control.panel.users.admin.removed", args: [user.username])
+        redirect( controller: "controlPanel", action: "index", params:[editMode: "user", userId: user.id])
     }
 }

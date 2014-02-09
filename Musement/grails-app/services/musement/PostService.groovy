@@ -30,4 +30,33 @@ class PostService {
         return p;
     }
 
+    Boolean deletePost(Post post, boolean flush = true) {
+        User sender = post.getSender();
+        sender.removeFromPosts(post);
+        sender.save()
+        Category category = post.getCategory()
+        category.removeFromPosts(post);
+        category.save()
+        Notification.list().each {n ->
+            def postToRemove = [];
+            n.posts.each {p ->
+                if (p.id == post.id) {
+                    postToRemove.add(p);
+                }
+            }
+            if (postToRemove.size() > 0) {
+                for(Post p : postToRemove) {
+                    n.posts.remove (p);
+                }
+                n.save()
+            }
+        }
+        if (flush) {
+            post.delete(flush: true)
+        } else {
+            post.delete()
+        }
+        return true
+    }
+
 }
