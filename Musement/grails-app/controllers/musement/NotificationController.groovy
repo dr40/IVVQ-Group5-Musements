@@ -7,32 +7,45 @@ import grails.plugin.springsecurity.SpringSecurityService
 import grails.plugin.springsecurity.annotation.Secured
 
 class NotificationController {
-
+    /** Services*/
     SpringSecurityService springSecurityService
     NotificationService notificationService
 
+    /**
+     * Method for counting the number of notifications, for an user
+     * @return The number of notifications(posts made by others on the categories that the user is fallowing)
+     */
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def notificationsNumber(){
+        //The logged user
         User currentUser =  (User)springSecurityService.getCurrentUser()
+
         def listPosts = currentUser.notification.posts*.getCategory()
         def listCat = []
-        for(list in listPosts)
+
+        //We count only one post per category
+        for(list in listPosts){
             if(!listCat.contains(list))
                 listCat.add(list)
+        }
         [notificationsNumber : listCat.size()]
     }
 
-
+    /**
+     *Method for showing a notification to  user
+     * @return List of notifications
+     */
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def showNotifications(){
-        User currentUser =  (User)springSecurityService.getCurrentUser()
-        def map = [:]
-        def map_user = [:]
-        List notifications = []
+        User currentUser =  (User)springSecurityService.getCurrentUser() //Logged user
+        def map = [:] // Saves the category and the number of posts in that category
+        def map_user = [:] // Saves the Sender for the categories where is one post
+        List notifications = [] // The notifications shown for the user
+
         for (post in currentUser.notification.posts){
             if(!map.containsKey(post.getCategory().name)){
                 map.put(post.getCategory().name,1)
-                map_user.put(post.getCategory().name, post.sender)
+                map_user.put(post.getCategory().name, post.getSender().username)
             }
             else
                 map[post.getCategory().name] = map.get(post.getCategory().name) +1
@@ -48,7 +61,8 @@ class NotificationController {
         [notifications: notifications]
 
     }
-    }
+
+}
 
 
 
