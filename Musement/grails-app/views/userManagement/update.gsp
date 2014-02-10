@@ -28,22 +28,21 @@
 <div class="container" style="margin-top: 50px; text-align: center">
 
     <h2><g:message code="musement.user.update"/></h2>
+    <h3>${user?.username}</h3>
+
+    <sec:ifLoggedIn>
+        <g:link class="btn btn-danger btn-large" controller="userManagement" action="unregister" onclick="return confirm(${message(code: "musement.user.delete.account")})" ><g:message code="musement.user.unregister"/></g:link>
+    </sec:ifLoggedIn>
+
 
     <!-- Alerts Info/Error -->
     <g:render template="alerts" model="[user: user]"/>
 
     <sec:ifLoggedIn >
-        <div class="hero-unit" style="width: 300px; margin: auto">
-            <g:form controller="userManagement" action="update" >
+        <div class="container" style="margin: 20px auto">
+        <div class="hero-unit pull-left" style="width: 300px; margin: auto">
+            <g:form controller="userManagement" action="updatePassword" >
                 <fieldset>
-
-                    <div class="form-group">
-                        <h3>${user.username}</h3>
-                    </div>
-                    <div class="form-group">
-                        <h4>${user.email}</h4>
-                    </div>
-
                     <div class="form-group">
                         <input type="password" class="form-control" id="password" name="password"
                                required="required"
@@ -69,15 +68,41 @@
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary"><g:message code="musement.user.update"/></button>
+                        <button type="submit" class="btn btn-primary"><g:message code="musement.user.update.change.password"/></button>
                         <button type="button" class="btn btn-warning" onclick="window.history.back()"><g:message code="musement.user.cancel"/></button>
                     </div>
 
                 </fieldset>
             </g:form>
+        </div>
+        <div class="hero-unit pull-right" style="width: 300px; margin: auto">
+            <g:form controller="userManagement" action="updateEmail" >
+                <fieldset>
 
-            <!-- Delete account -->
-            <g:link class="btn btn-danger" controller="userManagement" action="unregister" onclick="return confirm(${message(code: "musement.user.delete.account")})" ><g:message code="musement.user.unregister"/></g:link>
+                    <div class="form-group fieldcontain ${hasErrors(bean: user, field: 'email', 'error')} required">
+                        <input type="email" class="form-control" id="email" name="email"
+                               placeholder='${message(code: "musement.user.register.email")}'
+                               required="required"
+                               oninvalid="this.setCustomValidity(${message(code: 'musement.user.register.email.match')})"
+                               oninput="setCustomValidity('')"
+                               value="${fieldValue(bean: user, field: 'email')}">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password4" name="password4"
+                               required="required"
+                               placeholder='${message(code: "musement.user.update.password.old")}' >
+                    </div>
+
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary"><g:message code="musement.user.update.change.email"/></button>
+                        <button type="button" class="btn btn-warning" onclick="window.history.back()"><g:message code="musement.user.cancel"/></button>
+                    </div>
+
+                </fieldset>
+            </g:form>
+        </div>
         </div>
     </sec:ifLoggedIn>
 

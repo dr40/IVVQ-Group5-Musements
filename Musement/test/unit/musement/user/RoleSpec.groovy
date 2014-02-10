@@ -27,4 +27,38 @@ class RoleSpec extends Specification {
         ""                  | false
         "someRole"          | false
     }
+
+    void "test for unique constrains"() {
+        setup:
+        // Valid role
+        def role1 = new Role(authority: Roles.ROLE_ADMIN)
+        // Nullable fields
+        def role2 = new Role()
+        // Not unique
+        def role3 = new Role(authority: Roles.ROLE_ADMIN)
+        // Unique
+        def role4 = new Role(authority: Roles.ROLE_USER)
+
+        mockForConstraintsTests(Role, [role1])
+
+        expect:
+        // Check all members not nullable
+        assert !role2.validate()
+        assert "nullable" == role2.errors["authority"]
+
+        // Check not unique
+        assert !role3.validate()
+        assert "unique" == role3.errors["authority"]
+
+        // Validation should pass!
+        assert role4.validate()
+    }
+
+    void "test for getRole"(){
+        setup:
+        def role = new Role(authority: Roles.ROLE_USER)
+
+        expect:
+        assertNull(Roles.ROLE_USER.role)
+    }
 }

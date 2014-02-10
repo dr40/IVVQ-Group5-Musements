@@ -55,28 +55,6 @@ class UserAccountService {
     }
 
     /**
-     * Enable a user
-     * @param user the user to enabled
-     * @return the processed user
-     */
-    User enableUser(User user) {
-        user.enabled = true
-        user.save()
-        user
-    }
-
-    /**
-     * Disable a user
-     * @param user the user to disabled
-     * @return the processed user
-     */
-    User disableUser(User user) {
-        user.enabled = false
-        user.save()
-        user
-    }
-
-    /**
      *
      * @param newPassword the new password
      * @param user the user
