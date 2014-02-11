@@ -12,59 +12,52 @@ class BootStrapService {
     UserAccountService userAccountService
     CategoryService categoryService
 
-    Role normalRole
-    Role adminRole
-
-    User admin
-    User normal
-
-    Category musement
-
-    Notification adminNotification
-    Notification normalNotification
-
     def initializeRoles() {
         Sql sql = new Sql(dataSource)
 
-        adminRole = Role.findByAuthority(Roles.ROLE_ADMIN.name())
-        if (!adminRole) {
+        if (!Role.findByAuthority(Roles.ROLE_ADMIN.name())) {
             sql.executeInsert("insert into role (id,authority) values (1,${Roles.ROLE_ADMIN.name()})")
-            adminRole = Roles.ROLE_ADMIN.role
         }
 
-        normalRole = Role.findByAuthority(Roles.ROLE_USER.name())
-        if (!normalRole) {
+        if (!Role.findByAuthority(Roles.ROLE_USER.name())) {
             sql.executeInsert("insert into role (id,authority) values (2,${Roles.ROLE_USER.name()})")
-            normalRole = Roles.ROLE_USER.role
         }
     }
 
     def initializeDefaultCategory() {
         /* Default category */
-        musement = Category.findByName("Musement")
-        if (!musement) {
-            musement = new Category(name: 'Musement', description: 'Default Musement Category. Here you can see everything.')
+        if (!Category.findByName("Musement")) {
+            Category musement = new Category(name: 'Musement', description: 'Default Musement Category. Here you can see everything.')
             categoryService.addCategory(musement)
         }
     }
 
     def initializeDefaultUsers() {
+        Category musement = Category.findByName("Musement")
+        Role adminRole = Roles.ROLE_ADMIN.role
+        Role normalRole = Roles.ROLE_USER.role
+
+        // Check if roles and category exist
+        if (!musement || !musement.validate())
+            return
+
+        if (!Roles.ROLE_ADMIN.role || !Roles.ROLE_USER.role)
+            return
+
         /* Default admin user */
-        admin = User.findByUsername('admin')
-        if (!admin) {
-            admin = new User(username: 'admin', email: 'admin@musement.com', password: '12345678',
+        if (!User.findByUsername('admin')) {
+            def admin = new User(username: 'admin', email: 'admin@musement.com', password: '12345678',
                         notification: new Notification())
             admin.addToCategories(musement)
-            admin = userAccountService.addUser(admin, adminRole, true)
+            userAccountService.addUser(admin, adminRole, true)
         }
 
         /* Default normal user */
-        normal = User.findByUsername('default');
-        if (!normal) {
-            normal = new User(username: 'default', email: 'default@musement.com', password: '87654321',
+        if (!User.findByUsername('default')) {
+            def normal = new User(username: 'default', email: 'default@musement.com', password: '87654321',
                         notification: new Notification())
             normal.addToCategories(musement)
-            normal = userAccountService.addUser(normal, normalRole, true)
+            userAccountService.addUser(normal, normalRole, true)
         }
     }
 }
