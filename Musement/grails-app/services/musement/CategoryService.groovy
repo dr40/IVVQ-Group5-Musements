@@ -47,7 +47,7 @@ class CategoryService {
         }
         /* Delete all post from the category */
         Post.findAllByCategory(category).each { p ->
-            postService.deletePost(p, flush:false)
+            postService.deletePost(p, false)
         }
         /* Delete category and flush if needed */
         if (flush) {

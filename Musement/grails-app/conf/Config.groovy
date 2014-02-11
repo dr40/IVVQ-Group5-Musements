@@ -124,6 +124,7 @@ grails.plugin.springsecurity.authority.className = 'musement.user.Role'
 
 // Security Config
 grails.plugin.springsecurity.password.algorithm = 'bcrypt'
+grails.plugin.springsecurity.password.bcrypt.logrounds = 10
 
 // Enable default logout controller
 grails.plugin.springsecurity.logout.postOnly = false
@@ -140,11 +141,3 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/images/**':                  ['permitAll'],
 	'/**/favicon.ico':                ['permitAll']
 ]
-
-// Added so two equal strings encoded with encodePassword() method of
-// SpringSecurity plugin are still equal after begin encoded in test environment
-environments {
-    test {
-        grails.plugin.springsecurity.password.algorithm = 'SHA-1'
-    }
-}

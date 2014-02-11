@@ -49,7 +49,7 @@ class UserManagementController {
             selectedCategories.add("Musement")
             selectedCategories.each {
                 Category cat = Category.findByName(it.toString())
-                if (cat.validate())
+                if (cat && cat.validate())
                     user.addToCategories(cat)
             }
 
@@ -58,7 +58,7 @@ class UserManagementController {
             user.errors.rejectValue('password', 'musement.user.password.match')
         }
 
-        if (user.hasErrors()) {
+        if (!user || user.hasErrors()) {
             render(view: '/userManagement/register', model: [user: user])
         } else {
             redirect uri: '/login/auth'
@@ -77,39 +77,74 @@ class UserManagementController {
     }
 
     /**
-     * Method for updating current user password
-     * @return  The current user updated
+     * Method for loading the forms for updating current user's password or email
      */
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def update() {
         flash.clear()
-        User user = (User) springSecurityService.getCurrentUser()
+        render(view: '/userManagement/update', model: [user: springSecurityService.currentUser])
+    }
+
+    /**
+     * Method for updating the current user's password
+     */
+    @Secured(['IS_AUTHENTICATED_FULLY'])
+    def updatePassword() {
+        User user = springSecurityService.currentUser
 
         // If the request is not POST, return
         if (!request.post) {
             return [user: user]
         }
 
-        if (params.password3 != params.password2) {
-            user.errors.rejectValue('password', 'musement.user.password.match')
-        } else {
-            // Verify the current password and then update
-            if (springSecurityService.passwordEncoder.isPasswordValid(user.password, params.password, null)) {
+        if (params.password2 == params.password3) {
+            if (params.password && params.password2 && springSecurityService.passwordEncoder.isPasswordValid(user.password, params.password, null)) {
+                // Change password only if old password was verified
                 user = userAccountService.updatePasswordForUser(params.password2, user)
             } else {
                 user.errors.rejectValue('password', 'musement.user.password.current.match')
             }
+        } else {
+            user.errors.rejectValue('password', 'musement.user.password.match')
         }
 
-        if (user.hasErrors()) {
+        if (!user || user.hasErrors()) {
             render(view: '/userManagement/update', model: [user: user])
         } else {
             springSecurityService.reauthenticate user.username
-            flash.info = message(code: 'musement.user.update.success')
-
+            flash.info = message(code: 'musement.user.update.password.success')
             render(view: '/userManagement/home', model: [user: user])
         }
     }
+
+    /**
+     * Method for updating the current user's email
+     */
+    @Secured(['IS_AUTHENTICATED_FULLY'])
+    def updateEmail() {
+        User user = springSecurityService.currentUser
+
+        // If the request is not POST, return
+        if (!request.post) {
+            return [user: user]
+        }
+
+        // Verify the current password and then update
+        if (params.password4 && springSecurityService.passwordEncoder.isPasswordValid(user.password, params.password4, null)) {
+            user.email = params.email
+            user = userAccountService.updateUser(user, user.getAuthorities().getAt(0))
+        } else {
+            user.errors.rejectValue('password', 'musement.user.password.current.match')
+        }
+
+        if (!user || user.hasErrors()) {
+            render(view: '/userManagement/update', model: [user: user])
+        } else {
+            flash.info = message(code: 'musement.user.update.email.success')
+            render(view: '/userManagement/home', model: [user: user])
+        }
+    }
+
 
     /**
      * Load the home view for the authenticated user
@@ -134,9 +169,9 @@ class UserManagementController {
     @Secured(['ROLE_ADMIN'])
     def deleteUser() {
         if (params.containsKey("userId")) {
-            User user = User.findById(params.userId)
+            User user = User.findById(params.getLong('userId'))
 
-            if (user.validate()) {
+            if (user && user.validate()) {
                 User currentUser = springSecurityService.currentUser
 
                 if (currentUser.equals(user)) {
@@ -174,7 +209,7 @@ class UserManagementController {
 
         User user = User.findById(params.getLong('userId'))
 
-        if (!user.validate()) {
+        if (!user || !user.validate()) {
             flash.message = message(code: "musement.control.panel.users.null")
             redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
             return
@@ -198,11 +233,19 @@ class UserManagementController {
             return
         }
 
+        // Do not allow if there is only one admin left
+        if (UserRole.findAllByRole(Roles.ROLE_ADMIN.role).size() == 1) {
+            flash.message = message(code: "musement.control.panel.users.oneadmin")
+            redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+            return
+        }
+
         User user = User.findById(params.getLong('userId'))
 
-        if (!user.validate()) {
+        if (!user || !user.validate()) {
             flash.message = message(code: "musement.control.panel.users.null")
             redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+            return
         }
 
         // Redirect in case of own demotion

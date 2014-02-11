@@ -59,9 +59,8 @@
                     <fieldset>
 
                         <div class="form-group fieldcontain ${hasErrors(bean: user, field: 'email', 'error')} required">
-                            <input type="text" class="form-control" id="email" name="email"
+                            <input type="email" class="form-control" id="email" name="email"
                                    placeholder='${message(code: "musement.user.register.email")}'
-                                   pattern="^[_A-Za-z0-9-]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"
                                    required="required"
                                    oninvalid="this.setCustomValidity(${message(code: 'musement.user.register.email.match')})"
                                    oninput="setCustomValidity('')"
