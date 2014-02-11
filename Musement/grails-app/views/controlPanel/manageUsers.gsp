@@ -25,6 +25,7 @@
     <div style="margin: 50px auto auto 50px">
         <div class="hero-unit">
             <g:set var="user" value="${User.findById(params.getInt('userId'))}" />
+                    <h4 class="alert alert-info">${user?.email}</h4>
                     <h4>${message(code: "musement.control.panel.users.categories")}<span class="badge badge-info">${user?.categories.size()}</span></h4>
                     <h4>${message(code: "musement.control.panel.users.posts")}<span class="badge badge-info">${user?.posts.size()}</span></h4>
             <g:link class="btn btn-danger" controller="userManagement" action="deleteUser" onclick="return confirm(${message(code: "musement.control.panel.users.sure")})" params='[userId: params.userId]'>${message(code: "musement.control.panel.categories.delete")}</g:link>
