@@ -1,6 +1,7 @@
 package musement.user
 
 import grails.transaction.Transactional
+import musement.Category
 
 @Transactional
 class UserAccountService {
@@ -36,25 +37,21 @@ class UserAccountService {
     }
 
     /**
-     * Enable a user
-     * @param user the user to enabled
-     * @return the processed user
+     * Each time a category is created (by admin only), it will be added
+     * as being subscribed to all admins
+     * @param category
      */
-    User enableUser(User user) {
-        user.enabled = true
-        user.save()
-        user
-    }
+    void updateAdminCategories(Category category) {
+        def admins = UserRole.findAllByRole(Roles.ROLE_ADMIN.role)
 
-    /**
-     * Disable a user
-     * @param user the user to disabled
-     * @return the processed user
-     */
-    User disableUser(User user) {
-        user.enabled = false
-        user.save()
-        user
+        if (admins && admins.size() > 0) {
+            admins.each { admin ->
+                if (admin.user.validate()) {
+                    admin.user.addToCategories(category)
+                    admin.user.save(flush: true)
+                }
+            }
+        }
     }
 
     /**
