@@ -1,211 +1,149 @@
 package musement
 
 import grails.plugin.springsecurity.SpringSecurityService
-import grails.test.mixin.TestFor
+import musement.user.Roles
 import musement.user.User
-import musement.Category
+import musement.user.UserAccountService
 import spock.lang.*
 
-@TestFor(NotificationService)
 class NotificationServiceIntegrationSpec extends Specification {
 
     NotificationService notificationService
     PostService postService
     SpringSecurityService springSecurityService
+    BootStrapService bootStrapService
+    UserAccountService userAccountService
+    NotificationController notificationController
 
     Category category
 
     def setup(){
+        // Given the default Musement category and roles
+        bootStrapService.initializeRoles()
+        bootStrapService.initializeDefaultCategory()
 
-        postService = new PostService()
-        category = new Category(
-                name: "musement",
-                description: "First category"
-        ).save(failOnError: true)
-
+        category = Category.findByName("Musement")
     }
 
     void "User is notified about a post"(){
         given:"User subscribed to the category Musement"
-        def notification = new Notification()
-        User user = new User(
-                username: "First",
-                email: "a@gmail.com",
-                password: "Pass12",
-                notification: notification
-        )
+        def notificationUser = new Notification()
+        User user = new User( username: "user", email: "user@gmail.com", password: "user",
+                              notification: notificationUser)
         user.addToCategories(category)
         user.save(failOnError: true)
 
+        and:"A post"
+        Post post = new Post(content: "Visit",category: category)
+
         and:"Another user that post in Musement"
-        def notif = new Notification()
-        Post post = new Post(
-                content: "Visit",
-                category: category
-        )
-        User sender = new User(
-                username: "Sender",
-                email: "s@gmail.com",
-                password: "123456kkt",
-                notification: notif
-        )
+        def notificationSender = new Notification()
+        User sender = new User(username: "sender",email: "sender@gmail.com",password: "sender",
+                notification: notificationSender)
+
+        and:"Set sender with post and categories, like he did a post"
         sender.addToCategories(category)
         sender.addToPosts(post)
         sender.save(failOnError: true)
 
-
-        when:"The sender posts"
+        when:"The sender posts, the notification service is called"
         notificationService.notifyUsers(post)
 
-        then:"The user receives a notification"
-        user.notification.posts.size() ==1
+        then:" User notification updated with post"
+        user.notification.posts.each {p -> equals(post)}
 
         and:"The sender is not notified about his own post"
         sender.notification.posts == null
     }
 
-    void "Post saved with succes in Notification"(){
-        given:"A user"
+    void "Post saved with success in Notification"(){
+        given: "An user"
+        def notificationA = new Notification()
+        User userA = new User(username: "userA", email: "userA@musement.com", password: "passwordA",
+                notification: notificationA, categories: category)
+        userAccountService.addUser(userA, Roles.ROLE_USER.role)
+
+        and: "Another user"
         def notificationB = new Notification()
-        User.metaClass.static.encodePassword = { -> }
-        User userB = new User(
-                username: "First",
-                email: "a@gmail.com",
-                password: "Pass12",
-                notification: notificationB,
-                categories: category
-        )
-        Post postS = new Post(sender:userB, content:"First Post", category: category)
-        userB.addToPosts(postS)
-        userB.save(failOnError: true, flush:true)
+        User userB = new User(username: "userB", email: "userB@musement.com", password: "passwordB",
+                notification: notificationB, categories:category)
+        userAccountService.addUser(userB, Roles.ROLE_USER.role)
 
-        and:"A a user "
-        def notifB = new Notification()
-        User.metaClass.static.encodePassword = { -> }
-        User senderB = new User(
-                username: "Sender",
-                email: "s@gmail.com",
-                password: "123456kkt",
-                notification: notifB,
-                categories:category
-        )
+        when: "Sender sends Post"
+        postService.sendPost(userA, "First Post", category)
 
-        when:"Sender sends post"
-        postService.sendPost(userB,"First Post", category)
-
-        then:"Succes-save notification "
-        userB.posts.size() ==1
-        senderB.notification.posts.size() == 1
-
+        then: "Success save notification "
+        userA.posts.size() == 1
+        userB.notification.posts.size() == 1
     }
 
     void "Delete a post from notification after reading"(){
+        given: "An user"
+        def notificationA = new Notification()
+        User userA = new User(username: "userA", email: "userA@musement.com", password: "passwordA",
+                notification: notificationA, categories: category)
+        userAccountService.addUser(userA, Roles.ROLE_USER.role)
 
-        given:"a user with posts in notification"
-        def n_salsa = new Notification()
-        User.metaClass.static.encodePassword = { -> }
-        User salsa = new User(
-                username: "Salsa",
-                email: "s@gmail.com",
-                password: "123456kkt",
-                notification: n_salsa,
-                categories: category
-        )
-        salsa.save(flush:true)
+        and :"Other user"
+        def notificationB = new Notification()
+        User userB = new User(username: "userB", email: "userB@musement.com", password: "passwordB",
+                notification: notificationB, categories:category)
+        userAccountService.addUser(userB, Roles.ROLE_USER.role)
 
-        and :"other user"
-        Post postSend = new Post(content:"content")
-        User sender = new User(
-                username: "Salsa",
-                email: "s@gmail.com",
-                password: "123456kkt",
-                notification: n_salsa,
-                categories: category,
-                posts: postSend
-        ).save(flush:true)
+        and:"Sender sends Post"
+        postService.sendPost(userA, "First Post", category)
 
-        and:""
-        salsa.notification.posts.add(postSend)
-        salsa.save( failOnError: true, flush:true)
+        when: "UserB read the notification"
+        notificationService.readNotification(userB, category)
 
-        when: ""
-        notificationService.readNotification(salsa, category)
+        then:"Delete post from notification for userB"
+        userB.notification.posts.size() == 0
 
-        then:""
-        salsa.notification.posts == null
+        and:"the post is saved for sender"
+        userA.posts.each {p -> p.content =="First Post"}
 
+    }
+
+    void "All the post from a category should be deleted"(){
+        given: "An user"
+        def notificationA = new Notification()
+        User userA = new User(username: "userA", email: "userA@musement.com", password: "passwordA",
+                notification: notificationA, categories: category)
+        userAccountService.addUser(userA, Roles.ROLE_USER.role)
+
+        and :"Other user"
+        def notificationB = new Notification()
+        User userB = new User(username: "userB", email: "userB@musement.com", password: "passwordB",
+                notification: notificationB, categories:category)
+        userAccountService.addUser(userB, Roles.ROLE_USER.role)
+
+        and:"The thirth user"
+        def notificationC = new Notification()
+        User userC = new User(username: "userC", email: "userC@musement.com", password: "passwordC",
+                notification: notificationC, categories:category)
+        userAccountService.addUser(userC, Roles.ROLE_USER.role)
+
+        and:"Sender sends Post"
+        postService.sendPost(userB, "B Post", category)
+        postService.sendPost(userB,"B2 Post", category)
+        postService.sendPost(userC, "C Post", category)
+
+        and: "Notification number"
+        userA.notification.posts.size() == 3
+        userB.notification.posts.size() == 1
+        userC.notification.posts.size() == 2
+
+        when: "Read notifications"
+        notificationService.readNotification(userA, category)
+
+        then: "The posts for a category should be deleted"
+        userA.notification.posts.size() == 0
 
 
 
     }
 
-    void "the sender should not receive a notification"(){
-        given: "a post"
-        def notification = new Notification()
-        User.metaClass.encodePassword = { -> }
-        User user = new User(
-                username: "First",
-                email: "a@gmail.com",
-                password: "Pass12",
-                notification: notification,
-        ).save(failOnError: true)
-        Post post = new Post(
-                sender: user,
-                content: "Visit",
-                category: category
-        ).save(failOnError: true)
-
-        and:"add user to category"
-        user.addToCategories(category)
-
-        when:"notify called"
-        notificationService.notifyUsers(post)
-
-        then:"user notif empty"
-        user.notification.posts == null
-    }
-
-    void "the users from a category should be notified about a post "(){
-        given:" a sender"
-        def notification = new Notification()
-        User.metaClass.encodePassword = { -> }
-        User sender = new User(
-                username: "Sender",
-                email: "s@gmail.com",
-                password: "123456kkt",
-                notification: notification,
-                categories: category
-        ).save(failOnError: true)
-
-        and: "other user"
-        def notif = new Notification()
-        User user = new User(
-                username: "kkt",
-                email: "g@gmail.com",
-                password: "123456HA",
-                notification: notif,
-                categories: category
-        ).save(failOnError: true)
-
-        and:"a post"
-        Post post = new Post(
-                sender: sender,
-                content: "Visit",
-                category: category
-        ).save(failOnError: true)
 
 
-        when:"notify called"
-        assert notif.validate()
-        assert notif.save(flush:true)
-
-
-
-        then:"user notif empty"
-        notif.user.username == "kkt"
-        notif.posts.size() ==1
-
-
-    }
 
 }
