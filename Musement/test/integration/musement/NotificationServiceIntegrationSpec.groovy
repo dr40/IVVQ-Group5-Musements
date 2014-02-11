@@ -139,11 +139,55 @@ class NotificationServiceIntegrationSpec extends Specification {
         then: "The posts for a category should be deleted"
         userA.notification.posts.size() == 0
 
+    }
+    void "user should be notified only wth the post from his categories"(){
+        given: "An user"
+        def notificationA = new Notification()
+        User userA = new User(username: "userA", email: "userA@musement.com", password: "passwordA",
+                notification: notificationA, categories: category)
+        userAccountService.addUser(userA, Roles.ROLE_USER.role)
 
+        and :"Other user"
+        def notificationB = new Notification()
+        User userB = new User(username: "userB", email: "userB@musement.com", password: "passwordB",
+                notification: notificationB, categories:category)
+        userAccountService.addUser(userB, Roles.ROLE_USER.role)
+
+        and: "other category"
+        Category categoryB = new Category(name: "Test", description: "Second category")
+
+        and: " UserB subscribe to category"
+        userB.addToCategories(categoryB)
+
+        when:"UserB post in CategoryB"
+        postService.sendPost(userB, "B Post", categoryB)
+
+        then:" The user should not receive a notification"
+        userA.notification.posts == null
 
     }
+/*
+    void "read notification on a null notification()"(){
+        given:"a user without notification"
+        def notificationA = new Notification()
+        User userA = new User(username: "userA", email: "userA@musement.com", password: "passwordA",
+                         categories: category, notification: notificationA)
+        userAccountService.addUser(userA, Roles.ROLE_USER.role)
+
+        and: "other user"
+        def notificationB = new Notification()
+        User userB = new User(username: "userB", email: "userB@musement.com", password: "passwordB",
+                notification: notificationB, categories:category)
+        userAccountService.addUser(userB, Roles.ROLE_USER.role)
+
+        and:"a post"
+        postService.sendPost(userB, "B Post", category)
+
+        when:"A user wants to read the notification"
+        notificationService.readNotification(userA, category)
+
+        then:"fails because the notification in null"
 
 
-
-
+    }*/
 }

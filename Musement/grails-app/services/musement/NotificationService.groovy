@@ -13,15 +13,15 @@ class NotificationService {
         def n = user.notification;
         if (n.validate()) {
             def postToRemove = []
-            n.posts.each { p ->
-                if (p.getCategory().equals(category)) {
-                    postToRemove.add(p);
+                n.posts.each { p ->
+                    if (p.getCategory().equals(category)) {
+                        postToRemove.add(p);
+                    }
                 }
-            }
-            for(Post p : postToRemove) {
-                n.posts.remove (p);
-            }
-            n.save flush: true
+                for(Post p : postToRemove) {
+                    n.posts.remove (p);
+                }
+                n.save flush: true
         }
     }
 
@@ -35,5 +35,6 @@ class NotificationService {
         }
 
 
+    }
 }
-}
+
