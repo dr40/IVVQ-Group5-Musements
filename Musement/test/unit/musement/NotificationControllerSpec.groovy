@@ -1,31 +1,102 @@
 package musement
 
-
-
+import grails.plugin.springsecurity.SpringSecurityService
+import grails.plugin.springsecurity.authentication.encoding.BCryptPasswordEncoder
 import grails.test.mixin.*
 import spock.lang.*
-
+import musement.user.User
+@Mock([ User, Category, Notification, Post])
 @TestFor(NotificationController)
-@Mock(Notification)
 class NotificationControllerSpec extends Specification {
 
-    def populateValidParams(params) {
-        assert params != null
-        // TODO: Populate valid properties like...
-        //params["name"] = 'someValidName'
+    SpringSecurityService springSecurityService
+    NotificationService notificationService
+    User user
+    Category musementCategory
+    Notification notification
+    Post myPost
+    PostService postService
+
+    def setup(){
+        notification= Mock(Notification)
+        myPost = Mock(Post)
+        user = new User(username: "test", email: "test@musemnt.com", password: "\$2a\$10\$FDzV4Sw09Ua/z5dMP/FBWOyXFgo1pwTFG.KvIehsYycaL.ixUPnsi", notification: notification)
+        musementCategory = new Category(name: "Musement", description: "test")
+
+        // Notification Service
+        notificationService = Mock(NotificationService)
+        controller.notificationService = notificationService
+
+        // SpringSecurityService
+        springSecurityService = Mock(SpringSecurityService)
+        springSecurityService.currentUser >> user
+        controller.springSecurityService = springSecurityService
+
     }
 
-    void "Test the index action returns the correct model"() {
+    void "Test the notification number on null object"(){
+      when:"the number of notif requested"
+       def  x = controller.notificationsNumber()
 
-        when: "The index action is executed"
-        controller.index()
+      then:"the value should be 0 "
+        0 == x.notificationsNumber
+
+    }
+
+    void "test the notification number for a list of posts"(){
+        given:
+        myPost.category = musementCategory
+        myPost.id = 1
+
+        and:"a notification"
+        notification.user = user
+        user.notification.posts = myPost
+
+        when:" notification number requested"
+        def x = controller.notificationsNumber()
+
+        then: ""
+        notification.posts.size() == x.notificationsNumber
+
+    }
+
+
+    void "Test the show notification for one post"(){
+        given:" a mocked user"
+        def notification = Mock(Notification)
+        User user = new User(username: "test", email: "test@musement.com", password: "test", notification: notification)
+        springSecurityService.currentUser >>user
+
+        and:"set the category"
+        Category category = new Category(name:"musement", description:"First")
+
+        and:"another user"
+        def notificationB = Mock(Notification)
+        User userB = new User(username: "testB", email: "testB@musement.com", password: "testB", notification: notificationB)
+
+        and:"userB posts"
+        postService.sendPost(userB,"FirstPost", Mock(Category))
+
+        when:"show"
+        def model = controller.showNotifications()
+
+        then:""
+        model.notifications.size() == 1
+    }
+
+   /* void "Test the notificationNumber action returns the correct model"() {
+
+        when: "The notificationsNumber action is executed"
+        def user =  Mock(User)
+        user.validate()
+        controller.notificationsNumber()
 
         then: "The model is correct"
-        !model.notificationInstanceList
-        model.notificationInstanceCount == 0
-    }
+        model.notification
+        model.notificationNumber == 0
+    }*/
 
-    void "Test the create action returns the correct model"() {
+   /* void "Test the create action returns the correct model"() {
         when: "The create action is executed"
         controller.create()
 
@@ -142,5 +213,5 @@ class NotificationControllerSpec extends Specification {
         Notification.count() == 0
         response.redirectedUrl == '/notification/index'
         flash.message != null
-    }
+    }*/
 }

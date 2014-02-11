@@ -9,37 +9,32 @@ class NotificationService {
     SpringSecurityService springSecurityService
 
 
-    Notification updateNotification(Notification notification){
-        notification.save()
-        notification
-    }
-
-    void deleteNotification(Notification notification){
-        notification.delete()
-    }
-    void readCategory(User user, Category category) {
+    void readNotification(User user, Category category) {
         def n = user.notification;
         if (n.validate()) {
             def postToRemove = []
-            n.posts.each { p ->
-                if (p.getCategory().equals(category)) {
-                    postToRemove.add(p);
+                n.posts.each { p ->
+                    if (p.getCategory().equals(category)) {
+                        postToRemove.add(p);
+                    }
                 }
-            }
-            for(Post p : postToRemove) {
-                n.posts.remove (p);
-            }
-            n.save flush: true
+                for(Post p : postToRemove) {
+                    n.posts.remove (p);
+                }
+                n.save flush: true
         }
     }
+
     void notifyUsers(Post post){
+
         if (post.category.validate()) {
             post.category.users.each {u ->
                 if(!u.equals(post.sender))
-                    u.notification.addToPosts(post).save()
+                    u.notification.addToPosts(post).save(flush:true)
             }
         }
 
 
+    }
 }
-}
+
