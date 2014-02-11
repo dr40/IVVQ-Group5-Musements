@@ -487,6 +487,24 @@ class UserManagementControllerSpec extends Specification {
             flash.message != null
     }
 
+    void "test removeAdmin - valid params, one admin left"() {
+        given: "the id of the admin to be demoted"
+            List<UserRole> admins = Mock(ArrayList)
+            admins.size() >> 1
+            UserRole.metaClass.static.findAllByRole = { Role role -> admins }
+            params.userId = 13
+
+        when: "someone wants to demote an admin"
+            controller.removeAdmin()
+
+        then: "the service should not be called"
+            0 * userAccountService.updateUser((User) _, (Role) _)
+
+        then: "the corresponding controller, activity and params must be loaded"
+            response.redirectUrl == "/controlPanel/index?editMode=user"
+            flash.message != null
+    }
+
     void "test removeAdmin - valid params, invalid user"() {
         given: "the id of the admin to be demoted"
             new Role(authority: Roles.ROLE_ADMIN.name()).save()
@@ -495,7 +513,7 @@ class UserManagementControllerSpec extends Specification {
             User.metaClass.static.findById = { Long id -> other }
             params.userId = 13
 
-        when: "someone wants to make an user admin"
+        when: "someone wants to demote an admin"
             controller.removeAdmin()
 
         then: "the service should not be called"
@@ -514,7 +532,7 @@ class UserManagementControllerSpec extends Specification {
             User.metaClass.static.findById = { Long id -> other }
             params.userId = 13
 
-        when: "someone wants to make an user admin"
+        when: "someone wants to demote an admin"
             controller.removeAdmin()
 
         then: "the service should be called"
@@ -532,7 +550,7 @@ class UserManagementControllerSpec extends Specification {
             User.metaClass.static.findById = { Long id -> user }
             params.userId = 13
 
-        when: "someone wants to make an user admin"
+        when: "someone wants to demote an admin"
             controller.removeAdmin()
 
         then: "the service should be called"

@@ -5,7 +5,6 @@ import grails.plugin.springsecurity.annotation.Secured
 import musement.Notification
 import musement.Category
 import musement.NotificationService
-import org.springframework.security.authentication.encoding.PasswordEncoder
 
 class UserManagementController {
 
@@ -230,6 +229,13 @@ class UserManagementController {
     def removeAdmin() {
         if (!params.containsKey('userId')) {
             flash.message = message(code: "musement.control.panel.users.null")
+            redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
+            return
+        }
+
+        // Do not allow if there is only one admin left
+        if (UserRole.findAllByRole(Roles.ROLE_ADMIN.role).size() == 1) {
+            flash.message = message(code: "musement.control.panel.users.oneadmin")
             redirect( controller: "controlPanel", action: "index", params:[editMode: "user"])
             return
         }
