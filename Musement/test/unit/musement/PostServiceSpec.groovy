@@ -18,6 +18,11 @@ class PostServiceSpec extends Specification {
     def cleanup() {
     }
 
+    void "post can be posted"() {
+
+    }
+
+
     void "test something"() {
     }
 

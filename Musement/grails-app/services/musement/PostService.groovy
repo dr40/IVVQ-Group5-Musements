@@ -7,13 +7,15 @@ import musement.user.User;
 @Transactional
 class PostService {
 
+    /** Services **/
     NotificationService notificationService;
 
     /**
-     * Create a Post
-     * @param sender
-     * @param content
-     * @param toCategory
+     * Send a Post into a category and notify all others users which have subscribed to the category
+     * @param sender User which send the post
+     * @param content Content of the post
+     * @param toCategory Category where to post
+     * @return Post saved Or null if any error(s) occur(s)
      */
     Post sendPost(User sender, String content, Category toCategory) {
         Post p = new Post(content: content);
@@ -22,7 +24,7 @@ class PostService {
         toCategory.save flush:true
         if (p.validate()) {
             /* Save */
-            p.save flush:true
+            p = p.save flush:true
             notificationService.notifyUsers(p);
         } else {
             p = null;
@@ -30,6 +32,24 @@ class PostService {
         return p;
     }
 
+    /**
+     * Edit post
+     * @param post Post to edit
+     * @param newContent New content to set
+     * @return
+     */
+    Boolean editPost(Post post, String newContent) {
+        post.content = newContent;
+        post.save(flush:true);
+        return true;
+    }
+
+    /**
+     * Delete properly a Post
+     * @param post Post to delete
+     * @param flush Indicate if have to flush just after post deletion completed
+     * @return True if post deleted, false otherwise
+     */
     Boolean deletePost(Post post, boolean flush = true) {
         User sender = post.getSender();
         sender.removeFromPosts(post);

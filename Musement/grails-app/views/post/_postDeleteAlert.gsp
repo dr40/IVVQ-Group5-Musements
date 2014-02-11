@@ -25,6 +25,10 @@
 </g:form>
 
 <script>
+    /**
+     * Show delete post Alert
+     * @param postId Post id to delete
+     */
     function showPostDeleteAlert(postId) {
         document.getElementById("delete-postId").value = postId;
         $("#removePostConfirm").modal("show");

@@ -9,16 +9,20 @@
 
 <script>
 
+    /** List of posts showed in this page(s), used for optimizations purpose **/
     var postIds = new Array();
 
-
+    /**
+     * Change the search tags field
+     * @param tags Tags to set into the search tags field
+     */
     function post_setSearchTags(tags) {
         document.getElementById("searchTags").value = tags;
         post_searchTags();
     }
     /**
      * Show/Hide post follow tags
-     * @param tags List of tags separated by whitespace
+     * @param tags List of tags separated by any characters which are not letter or number
      */
     function post_searchTags() {
         /* Seek tags to search */
