@@ -1,17 +1,17 @@
 package musement.user
 
 import grails.plugin.springsecurity.SpringSecurityService
+import grails.test.spock.IntegrationSpec
 import musement.BootStrapService
 import musement.Notification
 import musement.NotificationService
-import spock.lang.*
 
 /**
  *  Integrations tests for UserManagementController.
  *  Even though all the Unit test passed and cover the class 100%,
  *  it should also be tested with real objects
  */
-class UserManagementControllerIntegrationSpec extends Specification {
+class UserManagementControllerIntegrationSpec extends IntegrationSpec {
 
     /** Services **/
     SpringSecurityService springSecurityService

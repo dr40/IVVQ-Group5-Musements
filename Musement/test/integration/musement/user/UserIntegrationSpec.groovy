@@ -1,13 +1,13 @@
 package musement.user
 
+import grails.test.spock.IntegrationSpec
 import musement.Notification
-import spock.lang.Specification
 
 /**
  * The purpose of these tests is to verify the <code>beforeInsert()</code> and
  * <code>beforeUpdate()</code> of the User domain class
  */
-class UserIntegrationSpec extends Specification {
+class UserIntegrationSpec extends IntegrationSpec {
 
     def springSecurityService
 

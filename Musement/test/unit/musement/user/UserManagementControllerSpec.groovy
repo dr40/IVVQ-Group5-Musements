@@ -365,7 +365,7 @@ class UserManagementControllerSpec extends Specification {
             controller.home()
 
         then: "the notification service should be called"
-            1 * notificationService.readCategory((User) _, (Category) _)
+            1 * notificationService.readNotification((User) _, (Category) _)
 
         then: "home page should be loaded with respective model"
             view == "/userManagement/home"
