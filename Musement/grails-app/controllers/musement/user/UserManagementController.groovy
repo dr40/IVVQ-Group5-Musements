@@ -19,7 +19,8 @@ class UserManagementController {
      */
     @Secured(['ROLE_ANONYMOUS'])
     def register() {
-        render(view: '/userManagement/register', model: [user: new User(params)])
+        User user = new User(params)
+        render(view: '/userManagement/register', model: [user: user])
     }
 
     /**
@@ -43,13 +44,14 @@ class UserManagementController {
             List selectedCategories = new ArrayList()
 
             if (params.list("cats"))
-                params.list("cats").each { selectedCategories.add(it) }
+                selectedCategories.addAll(params.list("cats"))
 
             // Add default category
             selectedCategories.add("Musement")
             selectedCategories.each {
-                Category cat = Category.findByName(it.toString())
-                if (cat && cat.validate())
+                Category cat = Category.findByName(it)
+
+                if (cat)
                     user.addToCategories(cat)
             }
 
@@ -61,8 +63,8 @@ class UserManagementController {
         if (!user || user.hasErrors()) {
             render(view: '/userManagement/register', model: [user: user])
         } else {
-            redirect uri: '/login/auth'
             flash.info = message(code: 'musement.user.register.success')
+            redirect(controller: "login", action: "auth")
         }
     }
 
@@ -72,8 +74,8 @@ class UserManagementController {
      */
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def unregister() {
-        userAccountService.deleteUser(springSecurityService.currentUser)
-        redirect controller: 'logout'
+        userAccountService.deleteUser(springSecurityService.getCurrentUser())
+        redirect(controller: "logout")
     }
 
     /**
@@ -82,7 +84,7 @@ class UserManagementController {
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def update() {
         flash.clear()
-        render(view: '/userManagement/update', model: [user: springSecurityService.currentUser])
+        render(view: '/userManagement/update', model: [user: springSecurityService.getCurrentUser()])
     }
 
     /**
@@ -90,7 +92,7 @@ class UserManagementController {
      */
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def updatePassword() {
-        User user = springSecurityService.currentUser
+        User user = springSecurityService.getCurrentUser()
 
         // If the request is not POST, return
         if (!request.post) {
@@ -122,7 +124,7 @@ class UserManagementController {
      */
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def updateEmail() {
-        User user = springSecurityService.currentUser
+        User user = springSecurityService.getCurrentUser()
 
         // If the request is not POST, return
         if (!request.post) {
@@ -152,14 +154,16 @@ class UserManagementController {
      */
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def home() {
+        User user = springSecurityService.getCurrentUser()
+
         def catId = (params.containsKey('categoryId') ?  params.categoryId : Category.findByName("Musement").id)
 
         // Verify if the user clicked on a Notification
         if (params.containsKey('readPost')) {
-            notificationService.readCategory(springSecurityService.currentUser, Category.findById(catId))
+            notificationService.readNotification(user, Category.findById(catId))
         }
 
-        render(view: 'home', model: [user: springSecurityService.currentUser, categoryId: catId])
+        render(view: 'home', model: [user: user, categoryId: catId])
     }
 
     /**
@@ -172,7 +176,7 @@ class UserManagementController {
             User user = User.findById(params.getLong('userId'))
 
             if (user && user.validate()) {
-                User currentUser = springSecurityService.currentUser
+                User currentUser = springSecurityService.getCurrentUser()
 
                 if (currentUser.equals(user)) {
                     flash.message = message(code: "musement.control.panel.users.cannot.delete")
@@ -250,7 +254,7 @@ class UserManagementController {
 
         // Redirect in case of own demotion
         userAccountService.updateUser(user, Roles.ROLE_USER.role)
-        User currentUser = springSecurityService.currentUser
+        User currentUser = springSecurityService.getCurrentUser()
         if (currentUser.equals(user)) {
             springSecurityService.reauthenticate user.username
 
