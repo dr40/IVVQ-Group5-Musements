@@ -13,7 +13,7 @@ class Post {
         sender nullable: false
         category nullable: false
         content blank: false
+        content maxSize: 256
     }
-
 
 }

@@ -1,6 +1,7 @@
 package musement
 
 import grails.test.mixin.TestFor
+import grails.test.spock.IntegrationSpec
 import musement.user.User
 import musement.Category
 import spock.lang.*
@@ -9,9 +10,9 @@ import spock.lang.*
  *
  */
 @TestFor(PostService)
-class PostServiceIntegrationSpec extends Specification {
+class PostServiceIntegrationSpec extends IntegrationSpec {
 
-    PostService postService;
+    PostService postService = new PostService();
 
     def setup() {
     }

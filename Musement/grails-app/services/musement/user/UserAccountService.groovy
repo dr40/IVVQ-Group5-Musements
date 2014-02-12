@@ -44,9 +44,9 @@ class UserAccountService {
     void updateAdminCategories(Category category) {
         def admins = UserRole.findAllByRole(Roles.ROLE_ADMIN.role)
 
-        if (admins && admins.size() > 0) {
+        if (admins) {
             admins.each { admin ->
-                if (admin.user.validate()) {
+                if (admin.user) {
                     admin.user.addToCategories(category)
                     admin.user.save(flush: true)
                 }

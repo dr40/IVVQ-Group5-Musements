@@ -1,6 +1,7 @@
 package musement.user
 
 import grails.plugin.springsecurity.SpringSecurityService
+import grails.test.spock.IntegrationSpec
 import musement.BootStrapService
 import musement.Notification
 import spock.lang.*
@@ -9,7 +10,7 @@ import spock.lang.*
  *  Tests for the UserAccountService.
  *  They are meant to ensure that all functions for the User domain function accordingly.
  */
-class UserAccountServiceIntegrationSpec extends Specification {
+class UserAccountServiceIntegrationSpec extends IntegrationSpec {
 
     BootStrapService bootStrapService
     UserAccountService userAccountService
@@ -44,6 +45,18 @@ class UserAccountServiceIntegrationSpec extends Specification {
             !user2.authorities.empty
             user2.authorities.first().authority == Roles.ROLE_USER.name()
             springSecurityService.passwordEncoder.isPasswordValid(user2.password, "test2", null)
+    }
+
+    def "test add user - invalid"() {
+        given: "the roles and three users"
+        bootStrapService.initializeRoles()
+
+        when: "adding a user"
+        userAccountService.addUser(new User(username: ".test", email: "test@@@", password: "", notification: new Notification()),
+                Roles.ROLE_USER.role)
+
+        then: "the user is not saved"
+        !User.findByUsername(".test")
     }
 
     @Unroll
