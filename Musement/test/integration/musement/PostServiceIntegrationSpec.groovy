@@ -1,7 +1,5 @@
 package musement
 
-import grails.plugin.springsecurity.SpringSecurityService
-import grails.test.mixin.TestFor
 import musement.user.Role
 import musement.user.Roles
 import musement.user.User

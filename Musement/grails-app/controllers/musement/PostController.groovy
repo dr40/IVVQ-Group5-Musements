@@ -6,9 +6,7 @@ import grails.plugin.springsecurity.SpringSecurityService
 import grails.plugin.springsecurity.SpringSecurityUtils
 import grails.plugin.springsecurity.annotation.Secured
 import grails.transaction.Transactional
-import musement.user.Roles
 import musement.user.User;
-import musement.user.UserRole;
 
 
 @Transactional(readOnly = true)
