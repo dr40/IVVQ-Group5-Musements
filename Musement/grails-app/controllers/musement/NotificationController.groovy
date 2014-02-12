@@ -1,9 +1,9 @@
 package musement
 
-import grails.transaction.Transactional
-import musement.user.User
 
 import static org.springframework.http.HttpStatus.*
+import grails.transaction.Transactional
+import musement.user.User
 import grails.plugin.springsecurity.SpringSecurityService
 import grails.plugin.springsecurity.annotation.Secured
 
