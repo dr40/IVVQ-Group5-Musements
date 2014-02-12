@@ -12,8 +12,7 @@ class Post {
     static constraints = {
         sender nullable: false
         category nullable: false
-        content blank: false
-        content maxSize: 256
+        content blank: false, maxSize: 256
     }
 
 }
