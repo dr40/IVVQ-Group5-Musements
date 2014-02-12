@@ -62,7 +62,7 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         compile ":scaffolding:2.0.1"
         compile ':cache:1.1.1'
-        compile ':codenarc:0.19'
+        compile ':codenarc:0.20'
         compile ':spring-security-core:2.0-RC2'
 
         // plugins needed at runtime but not for compilation
