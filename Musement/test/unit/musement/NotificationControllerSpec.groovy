@@ -5,7 +5,7 @@ import grails.plugin.springsecurity.authentication.encoding.BCryptPasswordEncode
 import grails.test.mixin.*
 import spock.lang.*
 import musement.user.User
-@Mock([ SpringSecurityService,User, Category, Notification,Post])
+@Mock([ User, Category, Notification, Post])
 @TestFor(NotificationController)
 class NotificationControllerSpec extends Specification {
 
@@ -15,6 +15,7 @@ class NotificationControllerSpec extends Specification {
     Category musementCategory
     Notification notification
     Post myPost
+    PostService postService
 
     def setup(){
         notification= Mock(Notification)
@@ -62,13 +63,19 @@ class NotificationControllerSpec extends Specification {
 
     void "Test the show notification for one post"(){
         given:" a mocked user"
-        User user = Mock(User)
+        def notification = Mock(Notification)
+        User user = new User(username: "test", email: "test@musement.com", password: "test", notification: notification)
         springSecurityService.currentUser >>user
 
         and:"set the category"
-        user.addToPosts(Mock(Post))
-        user.addToCategories((Mock(Category)))
-        user.notification = Mock(Notification)
+        Category category = new Category(name:"musement", description:"First")
+
+        and:"another user"
+        def notificationB = Mock(Notification)
+        User userB = new User(username: "testB", email: "testB@musement.com", password: "testB", notification: notificationB)
+
+        and:"userB posts"
+        postService.sendPost(userB,"FirstPost", Mock(Category))
 
         when:"show"
         def model = controller.showNotifications()
