@@ -1,122 +1,129 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
-		<style type="text/css" media="screen">
-			#status {
-				background-color: #eee;
-				border: .2em solid #fff;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
-				-moz-border-radius: 0.6em;
-				-webkit-border-radius: 0.6em;
-				border-radius: 0.6em;
-			}
+<head>
+    <meta name="layout" content="../layouts/musement"/>
+    <title>Welcome to Musement</title>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/Musement">Musement</a>
+            <sec:ifLoggedIn>
+                <div class="nav-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><g:link controller="userManagement" action="home" ><g:message code="musement.user.home"/></g:link></li>
+                        <li><g:link controller="logout" ><g:message code="musement.logout"/></g:link></li>
+                    </ul>
+                </div>
+            </sec:ifLoggedIn>
+            <sec:ifNotLoggedIn>
+                <div class="nav-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><g:link controller="login" ><g:message code="musement.login"/></g:link></li>
+                    </ul>
+                </div>
+            </sec:ifNotLoggedIn>
+        </div>
+    </div>
+</div>
 
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
+<div class="container" style="margin-top: 40px;">
 
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
+    <div class="pull-left" style="text-align: center; width: 27%; margin: 20px auto; position: fixed">
 
-			#status li {
-				line-height: 1.3;
-			}
+        <h2>${message(code: "musement.index.controllers")}</h2>
 
-			#status h1 {
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
+        <div class="well well-large">
+            <div class="btn-group-vertical">
+                <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+                    <g:link class="btn" controller="${c.logicalPropertyName}">${c.fullName}</g:link>
+                </g:each>
+            </div>
+        </div>
+    </div>
 
-			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
+    <div class="pull-right" style="width: 67%; overflow: auto;">
+        <div style="margin: 20px auto auto 20px; text-align: center">
+            <sec:ifNotLoggedIn>
+                <h2><g:message code="musement.user.register"/></h2>
 
-			h2 {
-				margin-top: 1em;
-				margin-bottom: 0.3em;
-				font-size: 1em;
-			}
+                <!-- Alerts Info/Error -->
+                <g:render template="/userManagement/alerts" model="[user: user]"/>
 
-			p {
-				line-height: 1.5;
-				margin: 0.25em 0;
-			}
+                <g:form class="hero-unit" controller="userManagement" action="doRegister" style="width: 300px; margin: auto">
+                    <fieldset>
 
-			#controller-list ul {
-				list-style-position: inside;
-			}
+                        <div class="form-group fieldcontain ${hasErrors(bean: user, field: 'email', 'error')} required">
+                            <input type="email" class="form-control" id="email" name="email"
+                                   placeholder='${message(code: "musement.user.register.email")}'
+                                   required="required"
+                                   oninvalid="this.setCustomValidity(${message(code: 'musement.user.register.email.match')})"
+                                   oninput="setCustomValidity('')"
+                                   value="${fieldValue(bean: user, field: 'email')}">
+                        </div>
 
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
+                        <div class="form-group fieldcontain ${hasErrors(bean: user, field: 'username', 'error')} required">
+                            <input type="text" class="form-control" id="username" name="username"
+                                   placeholder='${message(code: "musement.username")}'
+                                   pattern="^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*$"
+                                   required="required"
+                                   oninvalid="setCustomValidity(${message(code: "musement.user.register.username.match")})"
+                                   oninput="setCustomValidity('')"
+                                   value="${fieldValue(bean: user, field: 'username')}">
+                        </div>
 
-			@media screen and (max-width: 480px) {
-				#status {
-					display: none;
-				}
 
-				#page-body {
-					margin: 0 1em 1em;
-				}
+                        <div class="form-group fieldcontain ${hasErrors(bean: user, field: 'password', 'error')} required">
+                            <input type="password" class="form-control" id="password" name="password"
+                                   pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6,}$"
+                                   required="required"
+                                   oninvalid="setCustomValidity(${message(code: "musement.user.password.strenght")})"
+                                   oninput="setCustomValidity('')"
+                                   placeholder='${message(code: "musement.password")}' >
+                        </div>
 
-				#page-body h1 {
-					margin-top: 0;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-			<h1>Application Status</h1>
-			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
-			</ul>
-			<h1>Installed Plugins</h1>
-			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
-			</ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
+                        <div class="form-group fieldcontain ${hasErrors(bean: user, field: 'password', 'error')} required">
+                            <input type="password" class="form-control" id="password2" name="password2"
+                                   pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6,}$"
+                                   required="required"
+                                   oninvalid="setCustomValidity(${message(code: "musement.user.password.strenght")})"
+                                   oninput="setCustomValidity('')"
+                                   placeholder='${message(code: "musement.user.register.password2")}'>
+                        </div>
 
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
-			</div>
-		</div>
-	</body>
+                        <div class="form-group">
+                            <g:each var="category" in="${musement.Category.findAll().sort { it.id }}">
+                                <g:if test="${category?.name.equals('Musement')}">
+                                    <label><g:checkBox class="form-control" name="cats" checked="true" disabled="true" value="${category.name}" />${category.name}</label>
+                                </g:if>
+                                <g:else>
+                                    <label><g:checkBox class="form-control" name="cats" value="${category.name}" />${category.name}</label>
+                                </g:else>
+                            </g:each>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary"><g:message code="musement.user.register"/></button>
+                            <button type="button" class="btn btn-warning" onclick="window.history.back()"><g:message code="musement.user.cancel"/></button>
+                        </div>
+
+                    </fieldset>
+                </g:form>
+            </sec:ifNotLoggedIn>
+
+            <sec:ifLoggedIn>
+                <div class='alert alert-info' style="text-align: left">
+                    ${message(code: "musement.index.loggedin")}
+                </div>
+            </sec:ifLoggedIn>
+        </div>
+    </div>
+
+</div> <!-- /container -->
+</body>
 </html>

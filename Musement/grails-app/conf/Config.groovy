@@ -86,6 +86,7 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        grails.serverURL = "http://localhost:8080/Musement"
     }
     production {
         grails.logging.jul.usebridge = false
@@ -101,6 +102,8 @@ log4j = {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
 
+    // Uncomment this for Sprig Security debug:
+    // debug 'org.springframework.security'
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers
            'org.codehaus.groovy.grails.web.pages',          // GSP
            'org.codehaus.groovy.grails.web.sitemesh',       // layouts
@@ -113,3 +116,28 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'musement.user.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'musement.user.UserRole'
+grails.plugin.springsecurity.authority.className = 'musement.user.Role'
+
+// Security Config
+grails.plugin.springsecurity.password.algorithm = 'bcrypt'
+grails.plugin.springsecurity.password.bcrypt.logrounds = 10
+
+// Enable default logout controller
+grails.plugin.springsecurity.logout.postOnly = false
+
+// Redirect after successful login
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/userManagement/home'
+
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/**':                            ['permitAll'],
+	'/index':                         ['permitAll'],
+	'/index.gsp':                     ['permitAll'],
+	'/**/js/**':                      ['permitAll'],
+	'/**/css/**':                     ['permitAll'],
+	'/**/images/**':                  ['permitAll'],
+	'/**/favicon.ico':                ['permitAll']
+]
