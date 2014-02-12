@@ -2,7 +2,6 @@ package musement.user
 
 import grails.plugin.springsecurity.annotation.Secured
 import musement.Category
-import musement.CategoryController
 import musement.CategoryService
 
 /**
