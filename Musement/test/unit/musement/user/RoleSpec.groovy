@@ -59,6 +59,7 @@ class RoleSpec extends Specification {
         def role = new Role(authority: Roles.ROLE_USER)
 
         expect:
+        role
         assertNull(Roles.ROLE_USER.role)
     }
 }
