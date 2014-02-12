@@ -9,11 +9,6 @@ import musement.user.User
 @TestFor(Notification)
 class NotificationSpec extends Specification {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
 
     void "notification must have an user"() {
         def myPost = Mock(Post)
