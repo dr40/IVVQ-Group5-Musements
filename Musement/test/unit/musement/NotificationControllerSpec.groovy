@@ -1,7 +1,6 @@
 package musement
 
 import grails.plugin.springsecurity.SpringSecurityService
-import grails.plugin.springsecurity.authentication.encoding.BCryptPasswordEncoder
 import grails.test.mixin.*
 import spock.lang.*
 import musement.user.User
@@ -12,16 +11,22 @@ class NotificationControllerSpec extends Specification {
     SpringSecurityService springSecurityService
     NotificationService notificationService
     User user
+    User user2
     Category musementCategory
-    Notification notification
+    Category category2
     Post myPost
+    Post myPost2
+    Post myPost3
     PostService postService
 
     def setup(){
-        notification= Mock(Notification)
-        myPost = Mock(Post)
-        user = new User(username: "test", email: "test@musemnt.com", password: "\$2a\$10\$FDzV4Sw09Ua/z5dMP/FBWOyXFgo1pwTFG.KvIehsYycaL.ixUPnsi", notification: notification)
-        musementCategory = new Category(name: "Musement", description: "test")
+        user = new User(username: "test", email: "test@musemnt.com", password: "\$2a\$10\$FDzV4Sw09Ua/z5dMP/FBWOyXFgo1pwTFG.KvIehsYycaL.ixUPnsi")
+        user.notification = new Notification(user: user).save()
+        user2 = new User(username: "test2", email: "test@musemnt.com", password: "\$2a\$10\$FDzV4Sw09Ua/z5dMP/FBWOyXFgo1pwTFG.KvIehsYycaL.ixUPnsi")
+        user2.notification = new Notification(user: user2).save()
+
+        musementCategory = new Category(name: "Musement", description: "test").save()
+        category2 = new Category(name: "TestCategory", description: "test").save()
 
         // Notification Service
         notificationService = Mock(NotificationService)
@@ -32,186 +37,183 @@ class NotificationControllerSpec extends Specification {
         springSecurityService.currentUser >> user
         controller.springSecurityService = springSecurityService
 
+        /* Mocked functions */
+        User.metaClass.static.findByUsername = { def name ->
+            if (name == user.username) {
+                user
+            } else if (name == user2.username) {
+                user2
+            } else {
+                null
+            }
+        }
     }
-
+    @Unroll
     void "Test the notification number on null object"(){
-      when:"the number of notif requested"
-       def  x = controller.notificationsNumber()
+        when:"the number of notif requested"
+        def  x = controller.notificationsNumber()
 
-      then:"the value should be 0 "
+        then:"the value should be 0 "
         0 == x.notificationsNumber
 
     }
 
-    void "test the notification number for a list of posts"(){
-        given:
-        myPost.category = musementCategory
-        myPost.id = 1
+    @Unroll
+    void "Test the notification number for a list of posts"(){
+        given:"a post"
+        myPost = new Post(sender: user2, category: musementCategory, content: "My first post").save()
 
         and:"a notification"
-        notification.user = user
-        user.notification.posts = myPost
+        user.notification.addToPosts(myPost)
 
         when:" notification number requested"
         def x = controller.notificationsNumber()
 
-        then: ""
-        notification.posts.size() == x.notificationsNumber
+        then: "count of notification is correct"
+        user.notification.posts.size() == x.notificationsNumber
+
+    }
+    @Unroll
+    void "Test the notification number for many posts in the same category"(){
+        given:"a post"
+        myPost = new Post(sender: user2, category: musementCategory, content: "My first post").save()
+        myPost2 = new Post(sender: user2, category: musementCategory, content: "My second post").save()
+
+        and:"a notification"
+        user.notification.addToPosts(myPost)
+        user.notification.addToPosts(myPost2)
+
+        when:" notification number requested"
+        def x = controller.notificationsNumber()
+
+        then: "count of notification is correct"
+        1 == x.notificationsNumber
 
     }
 
+    @Unroll
+    void "Test the notification number for many posts in different categories"(){
+        given:"a post"
+        myPost = new Post(sender: user2, category: musementCategory, content: "My first post").save()
+        myPost3 = new Post(sender: user2, category: category2, content: "Other post").save()
+        myPost2 = new Post(sender: user2, category: musementCategory, content: "My second post").save()
 
-    void "Test the show notification for one post"(){
-        given:" a mocked user"
-        def notification = Mock(Notification)
-        User user = new User(username: "test", email: "test@musement.com", password: "test", notification: notification)
-        springSecurityService.currentUser >>user
+        and:"a notification"
+        user.notification.addToPosts(myPost)
+        user.notification.addToPosts(myPost2)
+        user.notification.addToPosts(myPost3)
 
-        and:"set the category"
-        Category category = new Category(name:"musement", description:"First")
+        when:" notification number requested"
+        def x = controller.notificationsNumber()
 
-        and:"another user"
-        def notificationB = Mock(Notification)
-        User userB = new User(username: "testB", email: "testB@musement.com", password: "testB", notification: notificationB)
+        then: "count of notification is correct"
+        user.notification.posts.unique{it.category.name}.size() == x.notificationsNumber
 
-        and:"userB posts"
-        postService.sendPost(userB,"FirstPost", Mock(Category))
+    }
+    @Unroll
+    void "Test show notification for one post"(){
+        given:" a post"
+        myPost = new Post(sender: user2, category: musementCategory, content: "My first post").save()
 
-        when:"show"
+        and:"a notification"
+        user.notification.addToPosts(myPost)
+
+        when:"showNotifications called"
         def model = controller.showNotifications()
 
-        then:""
+        then:"only one notification will be returned with sender field specified and post count = 1"
         model.notifications.size() == 1
+        model.notifications[0].post_count == 1
+        model.notifications[0].category == musementCategory
+        model.notifications[0].sender != null
     }
 
-   /* void "Test the notificationNumber action returns the correct model"() {
+    @Unroll
+    void "Test show notification for many post"() {
+        given:" two post send into the same category"
+        myPost = new Post(sender: user2, category: musementCategory, content: "My first post").save()
+        myPost2 = new Post(sender: user2, category: musementCategory, content: "My second post").save()
 
-        when: "The notificationsNumber action is executed"
-        def user =  Mock(User)
-        user.validate()
-        controller.notificationsNumber()
+        and:"two notification"
+        user.notification.addToPosts(myPost)
+        user.notification.addToPosts(myPost2)
 
-        then: "The model is correct"
-        model.notification
-        model.notificationNumber == 0
-    }*/
+        when:"showNotifications called"
+        def model = controller.showNotifications()
 
-   /* void "Test the create action returns the correct model"() {
-        when: "The create action is executed"
-        controller.create()
-
-        then: "The model is correctly created"
-        model.notificationInstance != null
+        then:"only one notification will be returned without sender field and post count = 2"
+        model.notifications.size() == 1
+        model.notifications[0].post_count == 2
+        model.notifications[0].category == musementCategory
+        model.notifications[0].sender == null
     }
 
-    void "Test the save action correctly persists an instance"() {
+    @Unroll
+    void "Test show notification for many notification"() {
+        given:" two post send into two distinct category"
+        myPost = new Post(sender: user2, category: musementCategory, content: "My first post").save()
+        myPost2 = new Post(sender: user2, category: category2, content: "My second post").save()
 
-        when: "The save action is executed with an invalid instance"
-        def notification = new Notification()
-        notification.validate()
-        controller.save(notification)
+        and:"two notification"
+        user.notification.addToPosts(myPost)
+        user.notification.addToPosts(myPost2)
 
-        then: "The create view is rendered again with the correct model"
-        model.notificationInstance != null
-        view == 'create'
+        when:"showNotifications called"
+        def model = controller.showNotifications()
 
-        when: "The save action is executed with a valid instance"
-        response.reset()
-        populateValidParams(params)
-        notification = new Notification(params)
+        then:"two notifications will be returned"
+        model.notifications.size() == user.notification.posts.size()
 
-        controller.save(notification)
+        and:"sender known"
+        model.notifications[0].post_count == 1
+        model.notifications[0].category == musementCategory
+        model.notifications[0].sender == user2
 
-        then: "A redirect is issued to the show action"
-        response.redirectedUrl == '/notification/show/1'
-        controller.flash.message != null
-        Notification.count() == 1
+        and:"sender known"
+        model.notifications[1].post_count == 1
+        model.notifications[1].category == category2
+        model.notifications[1].sender == user2
+
     }
 
-    void "Test that the show action returns the correct model"() {
-        when: "The show action is executed with a null domain"
-        controller.show(null)
+    @Unroll
+    void "Test show notification for posts in different categories and many notification"() {
+        given:" two post send into two distinct category"
+        myPost = new Post(sender: user2, category: musementCategory, content: "My first post").save()
+        myPost2 = new Post(sender: user2, category: category2, content: "My second post").save()
+        myPost3 = new Post(sender: user2, category: category2, content: "My thirth post").save()
 
-        then: "A 404 error is returned"
-        response.status == 404
+        and:"two notification"
+        user.notification.addToPosts(myPost)
+        user.notification.addToPosts(myPost2)
+        user.notification.addToPosts(myPost3)
 
-        when: "A domain instance is passed to the show action"
-        populateValidParams(params)
-        def notification = new Notification(params)
-        controller.show(notification)
+        when:"showNotifications called"
+        def model = controller.showNotifications()
 
-        then: "A model is populated containing the domain instance"
-        model.notificationInstance == notification
+        then:"two notifications will be returned"
+        model.notifications.size() == 2
+
+        and:"first notification"
+        model.notifications[0].post_count == 1
+        model.notifications[0].category == musementCategory
+        model.notifications[0].sender == user2
+
+        and:"second notification, sender null"
+        model.notifications[1].post_count == 2
+        model.notifications[1].category == category2
+        model.notifications[1].sender == null
+
     }
 
-    void "Test that the edit action returns the correct model"() {
-        when: "The edit action is executed with a null domain"
-        controller.edit(null)
+    @Unroll
+    void "Test show notification on null post"() {
 
-        then: "A 404 error is returned"
-        response.status == 404
+        when:"showNotifications called"
+        def model = controller.showNotifications()
 
-        when: "A domain instance is passed to the edit action"
-        populateValidParams(params)
-        def notification = new Notification(params)
-        controller.edit(notification)
-
-        then: "A model is populated containing the domain instance"
-        model.notificationInstance == notification
+        then:"nothing returned"
+        model.notifications == "None"
     }
 
-    void "Test the update action performs an update on a valid domain instance"() {
-        when: "Update is called for a domain instance that doesn't exist"
-        controller.update(null)
-
-        then: "A 404 error is returned"
-        response.redirectedUrl == '/notification/index'
-        flash.message != null
-
-
-        when: "An invalid domain instance is passed to the update action"
-        response.reset()
-        def notification = new Notification()
-        notification.validate()
-        controller.update(notification)
-
-        then: "The edit view is rendered again with the invalid instance"
-        view == 'edit'
-        model.notificationInstance == notification
-
-        when: "A valid domain instance is passed to the update action"
-        response.reset()
-        populateValidParams(params)
-        notification = new Notification(params).save(flush: true)
-        controller.update(notification)
-
-        then: "A redirect is issues to the show action"
-        response.redirectedUrl == "/notification/show/$notification.id"
-        flash.message != null
-    }
-
-    void "Test that the delete action deletes an instance if it exists"() {
-        when: "The delete action is called for a null instance"
-        controller.delete(null)
-
-        then: "A 404 is returned"
-        response.redirectedUrl == '/notification/index'
-        flash.message != null
-
-        when: "A domain instance is created"
-        response.reset()
-        populateValidParams(params)
-        def notification = new Notification(params).save(flush: true)
-
-        then: "It exists"
-        Notification.count() == 1
-
-        when: "The domain instance is passed to the delete action"
-        controller.delete(notification)
-
-        then: "The instance is deleted"
-        Notification.count() == 0
-        response.redirectedUrl == '/notification/index'
-        flash.message != null
-    }*/
 }
