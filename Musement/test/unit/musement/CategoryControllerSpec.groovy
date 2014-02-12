@@ -240,7 +240,7 @@ class CategoryControllerSpec extends Specification {
         user.categories = cats
 
         and: "the params"
-        Category test = new Category(name: "Test", description: "Test").save()
+        new Category(name: "Test", description: "Test").save()
         params.categories = ["Test", "InexistentCategory"]
 
         when: "the subscribe form is submitted"
