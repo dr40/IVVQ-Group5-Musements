@@ -36,14 +36,14 @@
 
                 <div class="form-group">
                     <g:each var="category" in="${musement.Category.findAll().sort { it.id }}">
-                        <g:if test="${category.id==1}">
-                            <label><g:checkBox class="form-control" name="categories" checked="true" disabled="true" value="${category.id}" />${category.name}</label>
+                        <g:if test="${category.name.equals("Musement")}">
+                            <label><g:checkBox class="form-control" name="categories" checked="true" disabled="true" value="${category.name}" />${category.name}</label>
                         </g:if>
-                        <g:elseif test="${user.categories.contains(category)}">
-                            <label><g:checkBox class="form-control" name="categories" checked="true" value="${category.id}" />${category.name}</label>
+                        <g:elseif test="${user?.categories?.contains(category)}">
+                            <label><g:checkBox class="form-control" name="categories" checked="true" value="${category.name}" />${category.name}</label>
                         </g:elseif>
                         <g:else>
-                            <label><g:checkBox class="form-control" name="categories" checked="false" value="${category.id}" />${category.name}</label>
+                            <label><g:checkBox class="form-control" name="categories" checked="false" value="${category.name}" />${category.name}</label>
                         </g:else>
                     </g:each>
                 </div>

@@ -29,30 +29,28 @@
     <!-- Alerts Info/Error -->
     <g:render template="alerts" model="[category: categoryInstance]"/>
 
-    <sec:ifLoggedIn>
-        <g:form class="hero-unit" url="[resource: categoryInstance, action: 'update']" controller="category" action="edit" method="PUT" style="width: 300px; margin: auto">
-            <fieldset>
+    <g:form class="hero-unit" url="[resource: categoryInstance, action: 'update']" controller="category" action="edit" method="PUT" style="width: 300px; margin: auto">
+        <fieldset>
 
-                <div class="form-group">
-                    <h3>${categoryInstance.name}</h3>
-                </div>
+            <div class="form-group">
+                <h3>${categoryInstance?.name}</h3>
+            </div>
 
-                <div class="form-group fieldcontain ${hasErrors(bean: categoryInstance, field: 'description', 'error')} ">
-                    <g:textField name="description"
-                                 pattern="${categoryInstance.constraints.description.matches}"
-                                 required="required"
-                                 placeholder='Description'
-                                 value="${categoryInstance?.description}"/>
-                </div>
+            <div class="form-group fieldcontain ${hasErrors(bean: categoryInstance, field: 'description', 'error')} ">
+                <g:textField name="description"
+                             pattern="${categoryInstance?.constraints.description.matches}"
+                             required="required"
+                             placeholder="Description"
+                             value="${categoryInstance?.description}"/>
+            </div>
 
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary"><g:message code="${message(code: 'default.button.update.label', default: 'Update')}"/></button>
-                    <button type="button" class="btn btn-warning" onclick="window.history.back()"><g:message code="musement.user.cancel"/></button>
-                </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary"><g:message code="${message(code: 'default.button.update.label', default: 'Update')}"/></button>
+                <button type="button" class="btn btn-warning" onclick="window.history.back()"><g:message code="musement.user.cancel"/></button>
+            </div>
 
-            </fieldset>
-        </g:form>
-    </sec:ifLoggedIn>
+        </fieldset>
+    </g:form>
 
 </div> <!-- /container -->
 
