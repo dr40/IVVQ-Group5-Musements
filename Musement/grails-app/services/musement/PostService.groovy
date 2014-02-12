@@ -18,6 +18,10 @@ class PostService {
      * @return Post saved Or null if any error(s) occur(s)
      */
     Post sendPost(User sender, String content, Category toCategory) {
+        /* Prevent an user that are not subscribed to a category, to post */
+        if ((sender.categories == null) || (!sender.categories.contains(toCategory))) {
+            return null;
+        }
         Post p = new Post(content: content);
         sender.addToPosts(p);
         toCategory.addToPosts(p);
@@ -39,9 +43,15 @@ class PostService {
      * @return
      */
     Boolean editPost(Post post, String newContent) {
+        def oldContent = post.content;
         post.content = newContent;
-        post.save(flush:true);
-        return true;
+        if (post.validate()) {
+            post.save(flush:true);
+            return true;
+        } else {
+            post.content = oldContent
+            return false;
+        }
     }
 
     /**
@@ -51,10 +61,13 @@ class PostService {
      * @return True if post deleted, false otherwise
      */
     Boolean deletePost(Post post, boolean flush = true) {
+        if (post == null) return false;
         User sender = post.getSender();
+        if (sender == null) return false;
         sender.removeFromPosts(post);
         sender.save()
         Category category = post.getCategory()
+        if (category == null) return false;
         category.removeFromPosts(post);
         category.save()
         Notification.list().each {n ->

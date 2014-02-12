@@ -21,9 +21,9 @@ class NotificationController {
     def notificationsNumber(){
         //The logged user
         User currentUser =  (User)springSecurityService.getCurrentUser()
-
         def listPosts
         def listCat = []
+
         if(currentUser.notification.posts!=null){
             listPosts = currentUser.notification.posts*.getCategory()
             //We count only one post per category
