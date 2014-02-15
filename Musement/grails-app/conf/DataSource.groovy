@@ -27,19 +27,13 @@ environments {
     }
     production {
         dataSource {
+            driverClassName = "com.mysql.jdbc.Driver"
+            dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
             dbCreate = "update"
-            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
-            properties {
-               maxActive = -1
-               minEvictableIdleTimeMillis=1800000
-               timeBetweenEvictionRunsMillis=1800000
-               numTestsPerEvictionRun=3
-               testOnBorrow=true
-               testWhileIdle=true
-               testOnReturn=false
-               validationQuery="SELECT 1"
-               jdbcInterceptors="ConnectionState"
-            }
+            url = "jdbc:mysql://ec2-23-21-211-172.compute-1.amazonaws.com"
+            username = "ivvq"
+            password = "ivvq"
+            logSql = true
         }
     }
 }
