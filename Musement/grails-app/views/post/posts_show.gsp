@@ -90,8 +90,6 @@
         }
     }
 
-
-
 </script>
 
 <g:render template="sendPostForm" model="[categoryId:categoryId]" />
@@ -109,7 +107,6 @@
     <g:include controller="post" action="renderAPost" params="[categoryId:categoryId, postId: post.id]"/>
 </g:each>
 <div style="margin-bottom: 80px;"></div>
-
 
 <g:render template="postDeleteAlert" model="[categoryId:categoryId]" />
 <g:render template="postEdit" model="[categoryId:categoryId]" />
